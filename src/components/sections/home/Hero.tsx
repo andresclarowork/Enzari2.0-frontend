@@ -155,7 +155,7 @@ export function Hero() {
                 style={{ 
                   background: '#F8FAFC',
                   border: '1px solid #CAD5E2',
-                  borderRadius: '12px'
+                  borderRadius: '16px'
                 }}
               >
                 {/* Inner white button */}
@@ -172,14 +172,14 @@ export function Hero() {
                     className="font-inter-tight font-normal text-base tracking-tight"
                     style={{
                       color: '#000000',
-                      margin: '6px 15px 6px 15px'
+                      margin: '6px 12px 6px 12px'
                     }}
                   >
                     Get In Touch With Us
                   </span>
                   
                   <div 
-                    className="w-12 h-12 rounded-full flex items-center justify-center relative"
+                    className="w-10 h-10 rounded-full flex items-center justify-center relative"
                     style={{
                       background: 'linear-gradient(135deg, #FE0B5F 0%, #FF5993 100%)'
                     }}
@@ -188,8 +188,8 @@ export function Hero() {
                     <div 
                       className="absolute rounded-full animate-ping"
                       style={{
-                        width: '45px',
-                        height: '45px',
+                        width: '36px',
+                        height: '36px',
                         background: 'linear-gradient(135deg, #FE0B5F 0%, #FF5993 100%)',
                         opacity: '0.3'
                       }}
@@ -198,7 +198,7 @@ export function Hero() {
                       className="w-5 h-5 text-white relative z-10" 
                       fill="none" 
                       stroke="currentColor" 
-                      viewBox="0 0 24 24"
+                      viewBox="0 0 20 20"
                     >
                       <path 
                         strokeLinecap="round" 
