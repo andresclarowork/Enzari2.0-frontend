@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ArrowRight } from 'lucide-react'
+import { Menu, X, ArrowUpRight } from 'lucide-react'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -18,7 +18,7 @@ export function Header() {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      <nav className="px-4 sm:px-6 lg:px-8">
+      <nav className="px-4 sm:px-6 lg:px-4">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -26,8 +26,8 @@ export function Header() {
               <Image
                 src="/assets/images/Logo.png"
                 alt="Enzari Creations Logo"
-                width={131}
-                height={32}
+                width={130}
+                height={28}
                 priority
                 className="h-8 w-auto"
               />
@@ -51,11 +51,11 @@ export function Header() {
           <div className="hidden md:block">
             <Link
               href="/contact"
-              className="text-white font-normal py-3 px-6 rounded-lg transition-colors duration-200 flex items-center space-x-2 font-inter-tight tracking-tight"
+              className="text-white font-normal py-2 px-4 rounded-lg transition-colors duration-200 flex items-center space-x-2 font-inter-tight tracking-tight"
               style={{ backgroundColor: '#FE0B5F' }}
             >
               <span>Book a spot</span>
-              <ArrowRight className="h-4 w-4" />
+              <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
 
@@ -97,7 +97,7 @@ export function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>Book a spot</span>
-                <ArrowRight className="h-4 w-4 inline ml-2" />
+                <ArrowUpRight className="h-4 w-4 inline ml-2" />
               </Link>
             </div>
           </div>

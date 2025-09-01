@@ -84,7 +84,7 @@ export function Footer() {
         </div>
 
         {/* Social Media Links */}
-        <div className="mt-12 pt-8 border-t border-gray-200">
+        <div className="mt-12 pt-8 mx-auto">
           <div className="flex flex-wrap gap-8">
             {socialLinks.map((social) => (
               <Link
@@ -92,7 +92,7 @@ export function Footer() {
                 href={social.href}
                 className="flex items-center space-x-2 text-gray-900 hover:text-gray-600 transition-colors duration-200 border-b border-gray-300 pb-1"
               >
-                <span className="text-sm font-medium uppercase tracking-wide">{social.name}</span>
+                <span className="text-sm font-medium uppercase tracking-wide mr-12">{social.name}</span>
                 <ArrowUpRight className="h-3 w-3" />
               </Link>
             ))}
@@ -100,7 +100,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Section - Copyright & Legal */}
-        <div className="mt-8 pt-8 border-t border-gray-200">
+        <div className="mt-8 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm">
               2025, All Rights Reserved

@@ -45,7 +45,7 @@ export function Testimonials() {
         {/* Cards Layout */}
         <div className="flex gap-6">
           {/* Rating Card */}
-          <div className="bg-white rounded-2xl p-8 text-center shadow-lg w-64 h-80">
+          <div className="bg-gray-100 rounded-2xl p-8 text-center flex-shrink-0 w-64 h-80 flex flex-col justify-center">
             <div className="text-6xl font-bold text-gray-900 mb-4">4.9</div>
             <div className="flex justify-center items-center space-x-1 mb-4">
               {[...Array(5)].map((_, i) => (
@@ -57,7 +57,7 @@ export function Testimonials() {
           
           {/* Testimonial Cards */}
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="bg-white rounded-2xl p-6 shadow-lg w-80 h-80 flex flex-col">
+            <div key={testimonial.id} className="bg-gray-100 rounded-2xl p-6 flex-shrink-0 w-64 h-80 flex flex-col">
               {/* Quote Icon */}
               <div className="text-4xl font-bold text-gray-900 mb-4">"</div>
               
