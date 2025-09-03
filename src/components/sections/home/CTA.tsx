@@ -5,7 +5,7 @@ export function CTA() {
   return (
     <section className="relative overflow-hidden">
       {/* Background Video */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0" style={{borderRadius:'32px', backgroundColor:'#11111180'}}>
         <video
           src="/assets/images/Home/CTA-background.mp4"
           autoPlay
@@ -16,28 +16,79 @@ export function CTA() {
         />
       </div>
       
-      <div className="relative z-10 py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              <div>We'd love to</div>
-              <div className="text-5xl lg:text-7xl">hear from you!</div>
-            </h2>
-            <p className="text-xl text-white mb-8 leading-relaxed max-w-2xl mx-auto">
-              For any questions, additional information, we encourage you to reach out to us. We are always here to assist and look forward to connecting with you.
-            </p>
-            
-            <div className="flex justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center bg-white hover:bg-gray-100 text-black font-semibold py-4 px-8 rounded-lg transition-colors duration-200 group shadow-lg"
-              >
-                <span>Contact Us</span>
-                <ArrowUpRight className="ml-2 h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
-              </Link>
-            </div>
-          </div>
+      <div className="flex flex-col relative z-10 pt-[103px] pb-[103px] gap-[40px] max-w-[563px] mx-auto">
+        
+        <div className="flex flex-col text-center">
+          <h2 
+            style={{
+              fontFamily: 'Inter Tight',
+              fontWeight: 400,
+              fontStyle: 'regular',
+              fontSize: '100px',
+              lineHeight: '100px',
+              letterSpacing: '-0.05em',
+              textAlign: 'center',
+              verticalAlign: 'middle',
+              color: '#FFFFFF'
+            }}
+          >
+            <div>We'd love to</div>
+            <div>hear from you!</div>
+          </h2>
         </div>
+
+        <div className="flex flex-col text-center max-w-[541px] mx-auto gap-5">
+          <p 
+            style={{
+              fontFamily: 'Inter Tight',
+              fontWeight: 400,
+              fontStyle: 'regular',
+              fontSize: '20px',
+              lineHeight: '24px',
+              letterSpacing: '-0.05em',
+              textAlign: 'center',
+              color: '#E4E4E4'
+            }}
+          >
+            For any questions, additional information, we encourage you to reach out to us. We are always here to assist and look forward to connecting with you.
+          </p>
+          
+          <div className="flex justify-center" style={{gap:'10px'}}>
+            <Link
+              href="/contact"
+              className="inline-flex items-center transition-colors duration-200 group shadow-lg"
+              style={{
+                borderRadius: '12px',
+                padding: '14px 22px',
+                gap: '10px',
+                color: '#FFFFFF',
+                backgroundColor: '#FFFFFF'              
+              }}
+            >
+              <span 
+                style={{
+                  fontFamily: 'Saans TRIAL',
+                  fontWeight: 500,
+                  fontSize: '16px',
+                  lineHeight: '1.2em',
+                  letterSpacing: '-0.05em',
+                  color: '#000000',
+                  
+                }}
+              >
+                Contact Us
+              </span>
+              <ArrowUpRight 
+                className="text-black group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200"
+                style={{ 
+                  width: '10.94px', 
+                  height: '11px',                  
+                }} 
+              />
+            </Link>
+          </div>
+        </div>                  
+        
       </div>
     </section>
   )

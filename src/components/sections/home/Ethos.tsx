@@ -25,7 +25,7 @@ const ethosCards = [
 
 export function Ethos() {
   return (
-    <section className="pt-[120px] pb-[120px]" style={{ backgroundColor: '#F4F4F4' }}>
+    <section className="pt-[80px] pb-[80px]" style={{ backgroundColor: '#F4F4F4' }}>
       <div>
         
           <div className="text-center mb-16" style={{ gap:'24px'}}>

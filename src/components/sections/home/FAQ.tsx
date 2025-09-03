@@ -38,44 +38,112 @@ export function FAQ() {
   }
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Left Side - Title */}
-          <div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-              <div>Frequently</div>
-              <div>Asked</div>
-              <div>Questions</div>
-            </h2>
-          </div>
-          
-          {/* Right Side - FAQ Items */}
-          <div className="space-y-4">
-            {faqs.map((faq) => (
-              <div key={faq.id} className="bg-gray-100 rounded-lg overflow-hidden">
-                <button
-                  onClick={() => toggleFaq(faq.id)}
-                  className="w-full px-6 py-4 text-left hover:bg-gray-200 transition-colors duration-200 flex items-center justify-between"
+    <section className="flex flex-row items-center justify-between max-w-[1440px] mx-auto pt-[120px] pl-[100px] pr-[100px] bg-white">
+      
+      <div 
+        className="flex flex-row"
+        style={{
+          width: '100%',
+          minHeight: '411px',
+          justifyContent: 'space-between'
+        }}
+      >
+        {/* Left Side - Title */}
+        <div className="flex flex-col max-w-[448px]">
+          <h2 
+            style={{
+              fontFamily: 'Inter Tight',
+              fontWeight: 400,
+              fontStyle: 'regular',
+              fontSize: '80px',
+              lineHeight: '82px',
+              letterSpacing: '0.05em',
+              verticalAlign: 'middle',
+              color: '#000000'
+            }}
+          >
+            <div>Frequently</div>
+            <div>Asked</div>
+            <div>Questions</div>
+          </h2>
+        </div>
+        
+        {/* Right Side - FAQ Items */}
+        <div 
+          className="flex flex-col gap-4" 
+          style={{             
+            maxWidth: '743px',
+            width: '743px',
+            paddingTop: '4px'
+          }}
+        >
+          {faqs.map((faq) => (
+            <div 
+              key={faq.id} 
+              className="overflow-hidden"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                borderRadius: '16px',
+                border: '1px solid #EDEDED',
+                padding: '24px',
+                backgroundColor: '#F4F4F4',
+                gap: '20px',
+                width: '100%',
+                minHeight: 'fit-content',
+                boxSizing: 'border-box'
+              }}
+            >
+              <button
+                onClick={() => toggleFaq(faq.id)}
+                className="w-full text-left hover:bg-gray-200 transition-colors duration-200 flex items-center justify-between"
+                style={{ width: '100%' }}
+              >
+                <span 
+                  style={{
+                    fontFamily: 'Inter Tight',
+                    fontWeight: 500,
+                    fontSize: '22px',
+                    lineHeight: '24px',
+                    letterSpacing: '0px',
+                    verticalAlign: 'middle',
+                    color: '#111212',
+                    flex: 1
+                  }}
                 >
-                  <span className="font-medium text-gray-900">{faq.question}</span>
-                  {openFaq === faq.id ? (
-                    <Minus className="h-5 w-5 text-gray-900 flex-shrink-0" />
-                  ) : (
-                    <Plus className="h-5 w-5 text-gray-900 flex-shrink-0" />
-                  )}
-                </button>
-                
-                {openFaq === faq.id && (
-                  <div className="px-6 pb-4">
-                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                  </div>
+                  {faq.question}
+                </span>
+                {openFaq === faq.id ? (
+                  <Minus className="h-5 w-5 text-gray-900 flex-shrink-0" />
+                ) : (
+                  <Plus className="h-5 w-5 text-gray-900 flex-shrink-0" />
                 )}
-              </div>
-            ))}
-          </div>
+              </button>
+              
+              {openFaq === faq.id && (
+                <div style={{ width: '100%' }}>
+                  <p 
+                    style={{
+                      fontFamily: 'Inter Tight',
+                      fontWeight: 400,
+                      fontSize: '16px',
+                      lineHeight: '21px',
+                      letterSpacing: '0px',
+                      verticalAlign: 'middle',
+                      color: '#111212',
+                      opacity: '0.6',
+                      width: '100%'
+                    }}
+                  >
+                    {faq.answer}
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
+      
     </section>
   )
 } 

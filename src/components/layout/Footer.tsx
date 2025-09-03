@@ -24,38 +24,78 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer className="bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="max-w-[1440px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      
+        <div className="flex flex-col max-w-[1440px] mx-auto pl-[39px] pr-[39px] pt-[50px] pb-[50px]" style={{gap:'102px'}}>
+          
+          <div className="flex flex-row" style={{justifyContent:'space-between'}}>
             {/* Left Column - Branding */}
-            <div>
-              <Link href="/" className="flex items-center mb-6">
+            <div className="flex flex-col max-w-[397px]" style={{gap:'40px'}}>
+              <Link href="/" className="flex items-center">
                 <Image
                   src="/assets/images/Logo.png"
                   alt="Enzari Creations Logo"
                   width={131}
                   height={32}
-                  priority
-                  className="h-8 w-auto"
+                  priority                  
                 />
               </Link>
-              <p className="text-4xl font-bold text-gray-900 leading-tight">
+              <p 
+                style={{
+                  fontFamily: 'Inter Tight',
+                  fontWeight: 400,
+                  fontStyle: 'regular',
+                  fontSize: '62px',
+                  lineHeight: '62px',
+                  letterSpacing: '-0.05em',
+                  color: '#000000'
+                }}
+              >
                 <div>Leading the</div>
                 <div>next era of work.</div>
               </p>
             </div>
 
             {/* Right Column - Quick Links and Contact Information */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div 
+              className="flex flex-row"
+              style={{
+                maxWidth: '581px',
+                gap: '145px'
+              }}
+            >
               {/* Quick Links */}
-              <div>
-                <h3 className="text-sm font-bold text-gray-900 mb-4 uppercase tracking-wide">QUICK LINKS</h3>
-                <ul className="space-y-2">
+              <div className="flex flex-col" style={{gap:'24px'}}>
+                <h3 
+                  style={{
+                    fontFamily: 'Inter Tight',
+                    fontWeight: 700,
+                    fontSize: '16px',
+                    lineHeight: '100%',
+                    letterSpacing: '0px',
+                    verticalAlign: 'middle',
+                    color: '#252A33'
+                  }}
+                >
+                  QUICK LINKS
+                </h3>
+                <ul 
+                  className="flex flex-col"
+                  style={{ gap: '20px' }}
+                >
                   {footerLinks.quickLinks.map((link) => (
                     <li key={link.name}>
                       <Link
                         href={link.href}
-                        className="text-gray-900 hover:text-gray-600 transition-colors duration-200"
+                        className="hover:text-gray-600 transition-colors duration-200"
+                        style={{
+                          fontFamily: 'Inter Tight',
+                          fontWeight: 400,
+                          fontStyle: 'regular',
+                          fontSize: '22px',
+                          lineHeight: '25px',
+                          letterSpacing: '-0.03em',
+                          color: '#111111'
+                        }}
                       >
                         {link.name}
                       </Link>
@@ -65,59 +105,170 @@ export function Footer() {
               </div>
 
               {/* Contact Information */}
-              <div>
-                <div className="mb-6">
-                  <h3 className="text-sm font-bold text-gray-900 mb-2 uppercase tracking-wide">CALL US</h3>
-                  <p className="text-gray-900">+1 (609) 451-0357</p>
+              <div className="flex flex-col max-w-[292px]" style={{gap:'30px'}}>
+                <div className="gap-6">
+                  <h3 
+                    style={{
+                      fontFamily: 'Inter Tight',
+                      fontWeight: 700,
+                      fontStyle: 'bold',
+                      fontSize: '16px',
+                      lineHeight: '1em',
+                      letterSpacing: '0px',
+                      color: '#252A33'
+                    }}
+                  >
+                    CALL US
+                  </h3>
+                  <p style={{
+                      fontFamily: 'Inter Tight',
+                      fontWeight: 400,
+                      fontStyle: 'regular',
+                      fontSize: '22px',
+                      lineHeight: '25px',
+                      letterSpacing: '-0.03em',
+                      color: '#111111'
+                    }}>+1 (609) 451-0357</p>
                 </div>
                 
                 <div className="mb-6">
-                  <h3 className="text-sm font-bold text-gray-900 mb-2 uppercase tracking-wide">EMAIL US</h3>
-                  <p className="text-gray-900">STUDIO@ENZARI.CO</p>
+                  <h3  
+                  style={{
+                      fontFamily: 'Inter Tight',
+                      fontWeight: 700,
+                      fontStyle: 'bold',
+                      fontSize: '16px',
+                      lineHeight: '1em',
+                      letterSpacing: '0px',
+                      color: '#252A33'
+                    }}>EMAIL US</h3>
+                  <p style={{
+                      fontFamily: 'Inter Tight',
+                      fontWeight: 400,
+                      fontStyle: 'regular',
+                      fontSize: '22px',
+                      lineHeight: '25px',
+                      letterSpacing: '-0.03em',
+                      color: '#111111'
+                    }}>STUDIO@ENZARI.CO</p>
                 </div>
                 
                 <div>
-                  <h3 className="text-sm font-bold text-gray-900 mb-2 uppercase tracking-wide">ADDRESS</h3>
-                  <p className="text-gray-900">725 N HITE AVE APT 1, LOUISVILLE, KENTUCKY 40206</p>
+                  <h3  
+                    style={{
+                    fontFamily: 'Inter Tight',
+                    fontWeight: 700,
+                    fontStyle: 'bold',
+                    fontSize: '16px',
+                    lineHeight: '1em',
+                    letterSpacing: '0px',
+                    color: '#252A33'
+                    }}
+                  >
+                      ADDRESS
+                  </h3>
+                  <p 
+                    style={{
+                      fontFamily: 'Inter Tight',
+                      fontWeight: 400,
+                      fontStyle: 'regular',
+                      fontSize: '22px',
+                      lineHeight: '25px',
+                      letterSpacing: '-0.03em',
+                      color: '#111111'
+                    }}
+                  >
+                    725 N HITE AVE APT 1, LOUISVILLE, KENTUCKY 40206
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-
+                   
+          
           {/* Social Media Links */}
-          <div className="mt-12 pt-8 mx-auto">
-            <div className="flex flex-wrap gap-8">
-              {socialLinks.map((social) => (
-                <Link
-                  key={social.name}
-                  href={social.href}
-                  className="flex items-center space-x-2 text-gray-900 hover:text-gray-600 transition-colors duration-200 border-b border-gray-300 pb-1"
+          <div className="flex flex-row" style={{justifyContent:'space-between'}}>            
+            {socialLinks.map((social) => (
+              <Link 
+                key={social.name}
+                href={social.href}
+                className="flex flex-row items-start max-w-[210px] pb-[11px]"
+                style={{ borderBottom: '1px solid #999999' }}
+              >
+                <span 
+                  className="uppercase mr-12"
+                  style={{
+                    fontFamily: 'Inter Tight',
+                    fontWeight: 400,
+                    fontStyle: 'regular',
+                    fontSize: '22px',
+                    lineHeight: '27.5px',
+                    textTransform: 'uppercase',
+                    color: '#252A33'
+                  }}
                 >
-                  <span className="text-sm font-medium uppercase tracking-wide mr-12">{social.name}</span>
-                  <ArrowUpRight className="h-3 w-3" />
-                </Link>
-              ))}
-            </div>
+                  {social.name}
+                </span>
+                <ArrowUpRight className="h-6 w-6" />
+              </Link>
+            ))}
+            
           </div>
+         
+          
 
           {/* Bottom Section - Copyright & Legal */}
-          <div className="mt-8 pt-8">
-            <div className="flex flex-col sm:flex-row justify-between items-center">
-              <p className="text-gray-500 text-sm">
+          <div className="flex flex-row" style={{justifyContent:'space-between'}}>
+            
+              <p 
+                style={{
+                  fontFamily: 'Inter Tight',
+                  fontWeight: 400,
+                  fontSize: '18px',
+                  lineHeight: '25px',
+                  letterSpacing: '-0.03em',
+                  verticalAlign: 'middle',
+                  color: '#111111'
+                }}
+              >
                 2025, All Rights Reserved
               </p>
-              <div className="flex space-x-6 mt-4 sm:mt-0">
-                <Link href="/terms" className="text-gray-500 text-sm hover:text-gray-700">
+              <div className="flex flex-row gap-[40px]">
+                <Link 
+                  href="/terms" 
+                  className="hover:text-gray-700"
+                  style={{
+                    fontFamily: 'Inter Tight',
+                    fontWeight: 400,
+                    fontStyle: 'regular',
+                    fontSize: '18px',
+                    lineHeight: '25px',
+                    letterSpacing: '-0.03em',
+                    color: '#111111'
+                  }}
+                >
                   Terms & Condition
                 </Link>
-                <Link href="/privacy" className="text-gray-500 text-sm hover:text-gray-700">
+                <Link 
+                  href="/privacy" 
+                  className="hover:text-gray-700"
+                  style={{
+                    fontFamily: 'Inter Tight',
+                    fontWeight: 400,
+                    fontStyle: 'regular',
+                    fontSize: '18px',
+                    lineHeight: '25px',
+                    letterSpacing: '-0.03em',
+                    color: '#111111'
+                  }}
+                >
                   Privacy Policy
                 </Link>
               </div>
-            </div>
+            
           </div>
         </div>
-      </div>
+      
     </footer>
   )
 } 

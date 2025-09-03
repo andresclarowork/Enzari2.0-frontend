@@ -33,43 +33,136 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-[1440px] mx-auto">
+    <section className="bg-white">
+      <div className="flex flex-col pl-[100px]" style={{ gap:'40px'}}>
+        
           {/* Title */}
-          <div className="mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
+          <div className="flex flex-row">
+            <h2 
+              style={{
+                fontFamily: 'Inter Tight',
+                fontWeight: 400,
+                fontStyle: 'regular',
+                fontSize: '80px',
+                lineHeight: '1.2em',
+                letterSpacing: '-0.05em',
+                verticalAlign: 'middle',
+                color: '#000000'
+              }}
+            >
               Our Happy Customes
             </h2>
           </div>
           
           {/* Cards Layout */}
-          <div className="flex gap-6">
+          <div className="flex flex-row gap-[20px] max-h-[460px]">
             {/* Rating Card */}
-            <div className="bg-gray-100 rounded-2xl p-8 text-center flex-shrink-0 w-64 h-80 flex flex-col justify-center">
-              <div className="text-6xl font-bold text-gray-900 mb-4">4.9</div>
-              <div className="flex justify-center items-center space-x-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-6 w-6 text-pink-500 fill-current" />
-                ))}
+            <div 
+              className="text-center flex-shrink-0 flex flex-col justify-center"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                width: '367px',
+                height: '460px',
+                borderRadius: '16px',
+                border: '1px solid #EDEDED',
+                padding: '24px',
+                gap: '42px',
+                backgroundColor: '#F4F4F4'
+              }}
+            >
+              <div 
+                style={{
+                  fontFamily: 'Inter Tight',
+                  fontWeight: 400,
+                  fontStyle: 'regular',
+                  fontSize: '100px',
+                  lineHeight: '108px',
+                  letterSpacing: '-0.05px',
+                  verticalAlign: 'middle',
+                  color: '#000000'
+                }}
+              >
+                4.9
               </div>
-              <p className="text-lg text-gray-600">200+ Five Star Rating</p>
+              <div className="flex flex-col" style={{ gap:'12px'}}>
+                <div className="flex justify-center items-center" style={{ gap:'5px'}}>
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-pink-500 fill-current" />
+                  ))}
+                </div>
+                <p 
+                  style={{
+                    fontFamily: 'Inter Tight',
+                    fontWeight: 400,
+                    fontStyle: 'regular',
+                    fontSize: '16px',
+                    lineHeight: '1em',
+                    letterSpacing: '0',
+                    verticalAlign: 'middle',
+                    color: '#000000'
+                  }}
+                >
+                  200+ Five Star Rating
+                </p>
+              </div>              
             </div>
             
             {/* Testimonial Cards */}
             {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="bg-gray-100 rounded-2xl p-6 flex-shrink-0 w-64 h-80 flex flex-col">
-                {/* Quote Icon */}
-                <div className="text-4xl font-bold text-gray-900 mb-4">"</div>
-                
-                {/* Testimonial Text */}
-                <blockquote className="text-gray-700 mb-6 text-sm leading-relaxed flex-1">
-                  {testimonial.text}
-                </blockquote>
-                
+              <div 
+                key={testimonial.id} 
+                className="flex-shrink-0 flex flex-col"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  width: '367px',
+                  height: '460px',
+                  borderRadius: '16px',
+                  border: '1px solid #EDEDED',
+                  justifyContent: 'space-between',
+                  padding: '32px',
+                  backgroundColor: '#F4F4F4'
+                }}
+              >
+                <div className="flex flex-col max-w-[303px]" style={{ gap:'40px'}}>
+                  {/* Quote Icon */}
+                  <div 
+                    style={{
+                      width: '31.93px',
+                      height: '27.44px',
+                      color: '#000000',                    
+                      fontWeight: 500,
+                      fontStyle: 'regular',
+                      fontSize: '64px',
+                      lineHeight: '48px',
+                      letterSpacing: '0',
+                      verticalAlign: 'middle',
+                      textAlign: 'left'
+                    }}
+                  >
+                    "
+                  </div>
+                  
+                  {/* Testimonial Text */}
+                  <blockquote 
+                    style={{
+                      fontFamily: 'Inter Tight',
+                      fontWeight: 400,
+                      fontStyle: 'regular',
+                      fontSize: '24px',
+                      lineHeight: '1em',
+                      letterSpacing: '-0.05em',
+                      verticalAlign: 'middle',
+                      color: '#000000'
+                    }}
+                  >
+                    {testimonial.text}
+                  </blockquote>
+                </div>
                 {/* Author Info */}
-                <div className="flex items-center space-x-3 mt-auto">
-                  <div className="w-10 h-10 rounded-full overflow-hidden">
+                <div className="flex items-center" style={{ gap:'13px'}}>
+                  <div className="overflow-hidden" style={{ width:'42px', height:'42px', borderRadius:'50%'}}>
                     <Image
                       src={testimonial.avatar}
                       alt={testimonial.name}
@@ -79,10 +172,30 @@ export function Testimonials() {
                     />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900 text-sm">
+                    <div 
+                      style={{
+                        fontFamily: 'Karla',
+                        fontWeight: 700,
+                        fontStyle: 'bold',
+                        fontSize: '20px',
+                        lineHeight: '1em',
+                        letterSpacing: '-0.09em',
+                        color: '#1A3637'
+                      }}
+                    >
                       {testimonial.name}, {testimonial.profession}
                     </div>
-                    <div className="text-gray-600 text-xs">
+                    <div 
+                      style={{
+                        fontFamily: 'Karla',
+                        fontWeight: 400,
+                        fontStyle: 'regular',
+                        fontSize: '16px',
+                        lineHeight: '1.2em',
+                        letterSpacing: '-0.01em',
+                        color: '#62748E'
+                      }}
+                    >
                       {testimonial.location}
                     </div>
                   </div>
@@ -90,7 +203,7 @@ export function Testimonials() {
               </div>
             ))}
           </div>
-        </div>
+        
       </div>
     </section>
   )

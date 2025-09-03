@@ -33,23 +33,42 @@ export function Team() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div>
+    <section className="pt-[148px] pb-[120px] bg-white">
+      <div className="flex flex-col pl-[100px] gap-[40px]">
+        
           {/* Title */}
-          <div className="mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
+          <div className="flex flex-row">
+            <h2 
+              style={{
+                fontFamily: 'Inter Tight',
+                fontWeight: 400,
+                fontStyle: 'regular',
+                fontSize: '80px',
+                lineHeight: '1.2em',
+                letterSpacing: '-0.05em',
+                verticalAlign: 'middle',
+                color: '#000000'
+              }}
+            >
               Enzari Team
             </h2>
           </div>
           
           {/* Team Members Carousel */}
           <div>
-            <div className="flex space-x-6">
+            <div className="flex flex-row" style={{ gap:'20px'}}>
               {teamMembers.map((member, index) => (
                 <div key={member.id} className="flex-shrink-0">
                   {/* Avatar Card */}
-                  <div className="w-80 h-96 rounded-2xl overflow-hidden shadow-lg group cursor-pointer" style={{ backgroundColor: '#FE0B5F' }}>
+                  <div 
+                    className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer" 
+                    style={{ 
+                      backgroundColor: '#FE0B5F',
+                      width: '367px',
+                      height: '460px',
+                      borderRadius: '24px'
+                    }}
+                  >
                     <div className="relative w-full h-full">
                       <Image
                         src={member.image}
@@ -88,7 +107,7 @@ export function Team() {
               ))}
             </div>
           </div>
-        </div>
+        
       </div>
     </section>
   )
