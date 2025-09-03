@@ -251,7 +251,7 @@ export function Hero() {
             <div className="text-center" style={{ display: 'flex', flexDirection: 'column', gap: '33px' }}>
               <h3 
                 style={{
-                  fontFamily: 'Neue Montreal',
+                  fontFamily: 'var(--font-neue-montreal)',
                   fontWeight: 400,
                   fontStyle: 'regular',
                   fontSize: '20px',

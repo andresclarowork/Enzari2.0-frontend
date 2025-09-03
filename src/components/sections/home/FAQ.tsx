@@ -52,7 +52,7 @@ export function FAQ() {
         <div className="flex flex-col max-w-[448px]">
           <h2 
             style={{
-              fontFamily: 'Inter Tight',
+              fontFamily: 'var(--font-inter-tight)',
               fontWeight: 400,
               fontStyle: 'regular',
               fontSize: '80px',
@@ -101,7 +101,7 @@ export function FAQ() {
               >
                 <span 
                   style={{
-                    fontFamily: 'Inter Tight',
+                    fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 500,
                     fontSize: '22px',
                     lineHeight: '24px',
@@ -124,7 +124,7 @@ export function FAQ() {
                 <div style={{ width: '100%' }}>
                   <p 
                     style={{
-                      fontFamily: 'Inter Tight',
+                      fontFamily: 'var(--font-inter-tight)',
                       fontWeight: 400,
                       fontSize: '16px',
                       lineHeight: '21px',

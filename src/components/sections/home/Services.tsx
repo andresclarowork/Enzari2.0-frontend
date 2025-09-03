@@ -29,7 +29,7 @@ export function Services() {
             </div>
             <p 
               style={{
-                fontFamily: 'Inter Tight',
+                fontFamily: 'var(--font-inter-tight)',
                 fontWeight: 400,
                 fontStyle: 'regular',
                 fontSize: '16px',
@@ -50,7 +50,7 @@ export function Services() {
         <div className="flex text-center flex flex-col lg:order-2 max-w-[508px]" style={{ gap:'50px'}}>          
           <h3 
             style={{
-              fontFamily: 'Inter Tight',
+              fontFamily: 'var(--font-inter-tight)',
               fontWeight: 400,
               fontStyle: 'regular',
               fontSize: '22px',
@@ -63,7 +63,7 @@ export function Services() {
           >
             <span 
               style={{
-                fontFamily: 'Saans TRIAL',
+                fontFamily: 'var(--font-saans-trial)',
                 fontWeight: 500,
                 fontSize: '16px',
                 lineHeight: '1.2em',
@@ -80,7 +80,7 @@ export function Services() {
                 key={index}
                 className="relative"
                 style={{
-                  fontFamily: 'Inter Tight',
+                  fontFamily: 'var(--font-inter-tight)',
                   fontWeight: 400,
                   fontStyle: 'regular',
                   fontSize: '72px',
@@ -110,7 +110,7 @@ export function Services() {
             >
               <span 
                 style={{
-                fontFamily: 'Saans TRIAL',
+                fontFamily: 'var(--font-saans-trial)',
                 fontWeight: 500,
                 fontSize: '16px',
                 lineHeight: '1.2em',
@@ -140,7 +140,7 @@ export function Services() {
             >
               <span
                 style={{
-                  fontFamily: 'Inter Tight',
+                  fontFamily: 'var(--font-inter-tight)',
                   fontWeight: 400,
                   fontStyle: 'regular',
                   fontSize: '16px',
@@ -173,7 +173,7 @@ export function Services() {
             </div>
             <p 
               style={{
-                fontFamily: 'Inter Tight',
+                fontFamily: 'var(--font-inter-tight)',
                 fontWeight: 400,
                 fontStyle: 'regular',
                 fontSize: '16px',

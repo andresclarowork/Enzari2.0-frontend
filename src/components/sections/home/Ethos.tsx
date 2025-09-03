@@ -31,7 +31,7 @@ export function Ethos() {
           <div className="text-center mb-16" style={{ gap:'24px'}}>
             <h2 
               style={{
-                fontFamily: 'Inter Tight',
+                fontFamily: 'var(--font-inter-tight)',
                 fontWeight: 400,
                 fontStyle: 'regular',
                 fontSize: '80px',
@@ -46,7 +46,7 @@ export function Ethos() {
             </h2>
             <p 
               style={{
-                fontFamily: 'Inter Tight',
+                fontFamily: 'var(--font-inter-tight)',
                 fontWeight: 400,
                 fontSize: '22px',
                 lineHeight: '25px',

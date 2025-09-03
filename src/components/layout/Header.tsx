@@ -64,7 +64,7 @@ export function Header() {
             </div>
 
             {/* CTA Button */}
-            <div className="hidden md:block">
+            <div className="hidden md:block" >
               <Link
                 href="/contact"
                 className="text-white transition-colors duration-200 flex items-center justify-center"
@@ -73,17 +73,22 @@ export function Header() {
                   maxHeight: '49px',
                   borderRadius: '12px',
                   padding: '14px 22px',
-                  fontFamily: 'Sharp Sans',
-                  fontWeight: 500,
-                  fontSize: '16px',
-                  lineHeight: '100%',
-                  letterSpacing: '-0.04em%',
-                  textAlign: 'center',
-                  color: '#FFFFFF',                  
+                  backgroundColor: '#FE0B5F',
                   gap: '10px'
                 }}
               >
-                <span>Book a spot</span>
+                <span 
+                  style={{fontFamily: 'var(--font-sharp-sans)',
+                  fontWeight: 500,
+                  fontSize: '16px',
+                  lineHeight: '100%',
+                  letterSpacing: '-0.04em',
+                  textAlign: 'center',
+                  color: '#FFFFFF'
+                  }}
+                >
+                  Book a spot
+                </span>
                 <ArrowUpRight className="h-3 w-3" />
               </Link>
             </div>

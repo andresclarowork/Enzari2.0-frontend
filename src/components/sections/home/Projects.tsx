@@ -54,7 +54,7 @@ export function Projects() {
           <div className="text-center" style={{ paddingTop: '107px', paddingBottom: '88px' }}>
             <h2 
               style={{
-                fontFamily: 'Inter Tight',
+                fontFamily: 'var(--font-inter-tight)',
                 fontWeight: 400,
                 fontStyle: 'regular',
                 fontSize: '80px',
@@ -103,7 +103,7 @@ export function Projects() {
                 <div className="flex flex-col max-w-[415px]" style={{ gap: '20px' }}>
                   <h3 
                     style={{
-                      fontFamily: 'Inter Tight',
+                      fontFamily: 'var(--font-inter-tight)',
                       fontWeight: 500,
                       fontStyle: 'medium',
                       fontSize: '28px',
@@ -116,7 +116,7 @@ export function Projects() {
                   </h3>
                   <p 
                     style={{
-                      fontFamily: 'Inter Tight',
+                      fontFamily: 'var(--font-inter-tight)',
                       fontWeight: 400,
                       fontStyle: 'regular',
                       fontSize: '18px',

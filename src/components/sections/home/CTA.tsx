@@ -21,7 +21,7 @@ export function CTA() {
         <div className="flex flex-col text-center">
           <h2 
             style={{
-              fontFamily: 'Inter Tight',
+              fontFamily: 'var(--font-inter-tight)',
               fontWeight: 400,
               fontStyle: 'regular',
               fontSize: '100px',
@@ -40,7 +40,7 @@ export function CTA() {
         <div className="flex flex-col text-center max-w-[541px] mx-auto gap-5">
           <p 
             style={{
-              fontFamily: 'Inter Tight',
+              fontFamily: 'var(--font-inter-tight)',
               fontWeight: 400,
               fontStyle: 'regular',
               fontSize: '20px',
@@ -67,7 +67,7 @@ export function CTA() {
             >
               <span 
                 style={{
-                  fontFamily: 'Saans TRIAL',
+                  fontFamily: 'var(--font-saans-trial)',
                   fontWeight: 500,
                   fontSize: '16px',
                   lineHeight: '1.2em',

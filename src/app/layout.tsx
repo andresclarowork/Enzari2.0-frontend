@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Poppins, Inter_Tight, Karla } from 'next/font/google'
+import { Inter, Poppins, Inter_Tight, Karla, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({
@@ -23,6 +23,13 @@ const karla = Karla({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-karla',
+})
+
+// Using Space Grotesk as substitute for Neue Montreal (similar style)
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-space-grotesk',
 })
 
 export const metadata: Metadata = {
@@ -54,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable} ${interTight.variable} ${karla.variable}`}>
+    <html lang="en" className={`${inter.variable} ${poppins.variable} ${interTight.variable} ${karla.variable} ${spaceGrotesk.variable}`}>
       <body className={`${inter.className} antialiased`}>
         {children}
       </body>

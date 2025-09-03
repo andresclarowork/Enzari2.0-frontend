@@ -41,7 +41,7 @@ export function Footer() {
               </Link>
               <p 
                 style={{
-                  fontFamily: 'Inter Tight',
+                  fontFamily: 'var(--font-inter-tight)',
                   fontWeight: 400,
                   fontStyle: 'regular',
                   fontSize: '62px',
@@ -67,7 +67,7 @@ export function Footer() {
               <div className="flex flex-col" style={{gap:'24px'}}>
                 <h3 
                   style={{
-                    fontFamily: 'Inter Tight',
+                    fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 700,
                     fontSize: '16px',
                     lineHeight: '100%',
@@ -88,7 +88,7 @@ export function Footer() {
                         href={link.href}
                         className="hover:text-gray-600 transition-colors duration-200"
                         style={{
-                          fontFamily: 'Inter Tight',
+                          fontFamily: 'var(--font-inter-tight)',
                           fontWeight: 400,
                           fontStyle: 'regular',
                           fontSize: '22px',
@@ -109,7 +109,7 @@ export function Footer() {
                 <div className="gap-6">
                   <h3 
                     style={{
-                      fontFamily: 'Inter Tight',
+                      fontFamily: 'var(--font-inter-tight)',
                       fontWeight: 700,
                       fontStyle: 'bold',
                       fontSize: '16px',
@@ -121,7 +121,7 @@ export function Footer() {
                     CALL US
                   </h3>
                   <p style={{
-                      fontFamily: 'Inter Tight',
+                      fontFamily: 'var(--font-inter-tight)',
                       fontWeight: 400,
                       fontStyle: 'regular',
                       fontSize: '22px',
@@ -134,7 +134,7 @@ export function Footer() {
                 <div className="mb-6">
                   <h3  
                   style={{
-                      fontFamily: 'Inter Tight',
+                      fontFamily: 'var(--font-inter-tight)',
                       fontWeight: 700,
                       fontStyle: 'bold',
                       fontSize: '16px',
@@ -143,7 +143,7 @@ export function Footer() {
                       color: '#252A33'
                     }}>EMAIL US</h3>
                   <p style={{
-                      fontFamily: 'Inter Tight',
+                      fontFamily: 'var(--font-inter-tight)',
                       fontWeight: 400,
                       fontStyle: 'regular',
                       fontSize: '22px',
@@ -156,7 +156,7 @@ export function Footer() {
                 <div>
                   <h3  
                     style={{
-                    fontFamily: 'Inter Tight',
+                    fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 700,
                     fontStyle: 'bold',
                     fontSize: '16px',
@@ -169,7 +169,7 @@ export function Footer() {
                   </h3>
                   <p 
                     style={{
-                      fontFamily: 'Inter Tight',
+                      fontFamily: 'var(--font-inter-tight)',
                       fontWeight: 400,
                       fontStyle: 'regular',
                       fontSize: '22px',
@@ -198,7 +198,7 @@ export function Footer() {
                 <span 
                   className="uppercase mr-12"
                   style={{
-                    fontFamily: 'Inter Tight',
+                    fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 400,
                     fontStyle: 'regular',
                     fontSize: '22px',
@@ -222,7 +222,7 @@ export function Footer() {
             
               <p 
                 style={{
-                  fontFamily: 'Inter Tight',
+                  fontFamily: 'var(--font-inter-tight)',
                   fontWeight: 400,
                   fontSize: '18px',
                   lineHeight: '25px',
@@ -238,7 +238,7 @@ export function Footer() {
                   href="/terms" 
                   className="hover:text-gray-700"
                   style={{
-                    fontFamily: 'Inter Tight',
+                    fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 400,
                     fontStyle: 'regular',
                     fontSize: '18px',
@@ -253,7 +253,7 @@ export function Footer() {
                   href="/privacy" 
                   className="hover:text-gray-700"
                   style={{
-                    fontFamily: 'Inter Tight',
+                    fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 400,
                     fontStyle: 'regular',
                     fontSize: '18px',

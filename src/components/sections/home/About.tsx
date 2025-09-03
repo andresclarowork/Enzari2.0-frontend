@@ -32,7 +32,7 @@ export function About() {
                   className="flex flex-row items-start" 
                   style={{
                     
-                    fontFamily: 'Inter Tight',
+                    fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 400,
                     fontStyle: 'regular',
                     fontSize: '100px',
@@ -124,7 +124,7 @@ export function About() {
                       <span 
                         className="flex flex-row whitespace-nowrap" 
                         style={{ 
-                          fontFamily: 'Satoshi',
+                          fontFamily: 'var(--font-satoshi)',
                           fontWeight: 400,
                           fontStyle: 'regular',
                           fontSize: '16px', 
@@ -141,7 +141,7 @@ export function About() {
                   </div>
                   <span 
                     style={{
-                      fontFamily: 'Inter Tight',
+                      fontFamily: 'var(--font-inter-tight)',
                       fontWeight: 400,
                       fontStyle: 'regular',
                       fontSize: '100px',
@@ -167,7 +167,7 @@ export function About() {
                   <p 
                     className="flex max-w-[522px]"
                     style={{
-                      fontFamily: 'Inter Tight',
+                      fontFamily: 'var(--font-inter-tight)',
                       fontWeight: 400,
                       fontStyle: 'regular',
                       fontSize: '18px',
@@ -199,7 +199,7 @@ export function About() {
                   >
                     <span 
                       style={{
-                        fontFamily: 'Inter Tight',
+                        fontFamily: 'var(--font-inter-tight)',
                         fontWeight: 400,
                         fontStyle: 'regular',
                         fontSize: '16px',
@@ -230,7 +230,7 @@ export function About() {
                   >
                     <span 
                       style={{
-                        fontFamily: 'Inter Tight',
+                        fontFamily: 'var(--font-inter-tight)',
                         fontWeight: 400,
                         fontStyle: 'regular',
                         fontSize: '16px',

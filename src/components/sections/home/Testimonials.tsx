@@ -40,7 +40,7 @@ export function Testimonials() {
           <div className="flex flex-row">
             <h2 
               style={{
-                fontFamily: 'Inter Tight',
+                fontFamily: 'var(--font-inter-tight)',
                 fontWeight: 400,
                 fontStyle: 'regular',
                 fontSize: '80px',
@@ -73,7 +73,7 @@ export function Testimonials() {
             >
               <div 
                 style={{
-                  fontFamily: 'Inter Tight',
+                  fontFamily: 'var(--font-inter-tight)',
                   fontWeight: 400,
                   fontStyle: 'regular',
                   fontSize: '100px',
@@ -93,7 +93,7 @@ export function Testimonials() {
                 </div>
                 <p 
                   style={{
-                    fontFamily: 'Inter Tight',
+                    fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 400,
                     fontStyle: 'regular',
                     fontSize: '16px',
@@ -147,7 +147,7 @@ export function Testimonials() {
                   {/* Testimonial Text */}
                   <blockquote 
                     style={{
-                      fontFamily: 'Inter Tight',
+                      fontFamily: 'var(--font-inter-tight)',
                       fontWeight: 400,
                       fontStyle: 'regular',
                       fontSize: '24px',
@@ -174,7 +174,7 @@ export function Testimonials() {
                   <div>
                     <div 
                       style={{
-                        fontFamily: 'Karla',
+                        fontFamily: 'var(--font-karla)',
                         fontWeight: 700,
                         fontStyle: 'bold',
                         fontSize: '20px',
@@ -187,7 +187,7 @@ export function Testimonials() {
                     </div>
                     <div 
                       style={{
-                        fontFamily: 'Karla',
+                        fontFamily: 'var(--font-karla)',
                         fontWeight: 400,
                         fontStyle: 'regular',
                         fontSize: '16px',
