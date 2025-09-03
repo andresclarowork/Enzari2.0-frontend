@@ -70,7 +70,7 @@ export function Projects() {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center items-center mx-auto" style={{ maxWidth: '1240px' }}>
             {projects.map((project) => (
               <div key={project.id} className="group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-2" style={{ gap:'25px', borderRadius: '32px' }}>
                 {/* Project Image */}

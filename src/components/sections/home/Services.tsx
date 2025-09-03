@@ -13,11 +13,11 @@ const services = [
 
 export function Services() {
   return (
-    <section className="pt-[132px] pb-[120px] bg-white">
+    <section className="flex pt-[132px] pb-[120px] bg-white">
          
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-stretch" style={{ minHeight: '600px' }}>
+      <div className="flex flex-row justify-between w-full grid grid-cols-1 lg:grid-cols-3 gap-16 items-stretch" style={{ minHeight: '600px' }}>
         {/* Left Side - Services List + Phone at bottom */}
-        <div className="lg:order-1 flex flex-col justify-end pl-[30px]">                   
+        <div className="flex lg:order-1 flex flex-col justify-end pl-[30px]">                   
           <div className="flex flex-col items-start gap-5">
             <div className="w-[346px] h-[286px] relative overflow-hidden shadow-2xl" style={{ borderRadius: '24px', backgroundColor:'#F2EFEB' }}>
             <Image
@@ -47,7 +47,7 @@ export function Services() {
         </div>
         
         {/* Center - Title and Buttons */}
-        <div className="text-center flex flex-col lg:order-2 max-w-[508px]" style={{ gap:'50px'}}>          
+        <div className="flex text-center flex flex-col lg:order-2 max-w-[508px]" style={{ gap:'50px'}}>          
           <h3 
             style={{
               fontFamily: 'Inter Tight',
@@ -161,7 +161,7 @@ export function Services() {
         </div>
         
         {/* Right Side - Phone at top */}      
-        <div className="lg:order-3 flex flex-col justify-start pl-[30px]">                    
+        <div className="flex lg:order-3 flex flex-col justify-start items-end pr-[30px]">                    
           <div className="flex flex-col items-start gap-5">
             <div className="w-[346px] h-[286px] relative overflow-hidden shadow-2xl" style={{ borderRadius: '24px', backgroundColor:'#F2EFEB' }}>
             <Image
