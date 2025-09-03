@@ -44,7 +44,7 @@ export function Header() {
                   href={item.href}
                   className="transition-all duration-200 flex items-center justify-center hover:font-bold"
                   style={{
-                    fontFamily: 'Inter Tight',
+                    fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 400,
                     fontSize: '16px',
                     lineHeight: '120%',
@@ -75,13 +75,11 @@ export function Header() {
                   padding: '14px 22px',
                   fontFamily: 'Sharp Sans',
                   fontWeight: 500,
-                  fontStyle: 'medium',
                   fontSize: '16px',
                   lineHeight: '100%',
-                  letterSpacing: '-4%',
+                  letterSpacing: '-0.04em%',
                   textAlign: 'center',
-                  color: '#FFFFFF',
-                  backgroundColor: '#FE0B5F',
+                  color: '#FFFFFF',                  
                   gap: '10px'
                 }}
               >

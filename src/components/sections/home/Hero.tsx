@@ -12,8 +12,8 @@ export function Hero() {
             {/* Left Content - Title */}
             <div className='flex'>
               <h1 
-                style={{
-                  fontFamily: 'Inter Tight',
+                style={{                  
+                  fontFamily: 'var(--font-inter-tight)',
                   fontWeight: 400,
                   fontStyle: 'regular',
                   fontSize: '80px',
@@ -36,7 +36,7 @@ export function Hero() {
                 <p 
                   className="text-black"
                   style={{
-                    fontFamily: 'Inter Tight',
+                    fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 400,
                     fontStyle: 'Regular',
                     fontSize: '18px',
@@ -67,7 +67,7 @@ export function Hero() {
                     <span 
                       className="text-black"
                       style={{
-                        fontFamily: 'Inter Tight',
+                        fontFamily: 'var(--font-inter-tight)',
                         fontWeight: 400,
                         fontStyle: 'regular',
                         fontSize: '16px',
@@ -140,7 +140,7 @@ export function Hero() {
                       <span 
                         className="text-black"
                         style={{
-                          fontFamily: 'Inter Tight',
+                          fontFamily: 'var(--font-inter-tight)',
                           fontWeight: 400,
                           fontStyle: 'regular',
                           fontSize: '16px',
@@ -155,7 +155,7 @@ export function Hero() {
                       <span 
                         className="text-black"
                         style={{
-                          fontFamily: 'Inter Tight',
+                          fontFamily: 'var(--font-inter-tight)',
                           fontWeight: 400,
                           fontStyle: 'regular',
                           fontSize: '16px',
@@ -190,7 +190,7 @@ export function Hero() {
             >
               <div 
                 style={{
-                  fontFamily: 'Inter Tight',
+                  fontFamily: 'var(--font-inter-tight)',
                   fontWeight: 400,
                   fontStyle: 'regular',
                   fontSize: '16px',
@@ -224,7 +224,7 @@ export function Hero() {
             >
               <div 
                 style={{
-                  fontFamily: 'Inter Tight',
+                  fontFamily: 'var(--font-inter-tight)',
                   fontWeight: 400,
                   fontStyle: 'regular',
                   fontSize: '16px',
@@ -351,7 +351,7 @@ export function Hero() {
               >
                 <span 
                   style={{
-                    fontFamily: 'Inter',
+                    fontFamily: 'var(--font-inter)',
                     fontWeight: 500,
                     fontStyle: 'medium',
                     fontSize: '16px',

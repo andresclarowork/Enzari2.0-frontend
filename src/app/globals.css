@@ -6,6 +6,8 @@
   :root {
     --font-inter: 'Inter', system-ui, sans-serif;
     --font-poppins: 'Poppins', system-ui, sans-serif;
+    --font-inter-tight: 'Inter Tight', system-ui, sans-serif;
+    --font-karla: 'Karla', system-ui, sans-serif;
   }
 
   * {
