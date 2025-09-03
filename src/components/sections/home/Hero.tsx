@@ -194,7 +194,7 @@ export function Hero() {
                   fontWeight: 400,
                   fontStyle: 'regular',
                   fontSize: '16px',
-                  lineHeight: '120%',
+                  lineHeight: '1.2em',
                   letterSpacing: '-0.5px',
                   color: '#FFFFFF'
                 }}
@@ -205,8 +205,7 @@ export function Hero() {
                 className="text-white" 
                 style={{ 
                   width: '10.94px', 
-                  height: '11px',
-                  marginLeft: '10.85px'
+                  height: '11px',                  
                 }} 
               />
             </Link>
@@ -228,7 +227,7 @@ export function Hero() {
                   fontWeight: 400,
                   fontStyle: 'regular',
                   fontSize: '16px',
-                  lineHeight: '120%',
+                  lineHeight: '1.2em',
                   letterSpacing: '-0.5px',
                   color: '#000000'
                 }}
@@ -239,8 +238,7 @@ export function Hero() {
                 className="text-black" 
                 style={{ 
                   width: '10.94px', 
-                  height: '11px',
-                  marginLeft: '10.85px'
+                  height: '11px',                  
                 }} 
               />
             </Link>
