@@ -47,23 +47,43 @@ export function Projects() {
   ]
 
   return (
-    <section className="py-20 bg-white">
-      <div className="px-4 sm:px-6 lg:px-8 mx-8">
-        <div className="max-w-7xl mx-auto">
+    <section className="bg-white border-radius-[32px] mt-[120px] pb-[120px]" style={{ backgroundColor: '#F4F4F4' }}>
+      <div style={{ paddingLeft: '100px', paddingRight: '100px' }}>
+        <div style={{ maxWidth: '1440px', margin: '0 auto' }}>
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-normal text-black font-inter-tight tracking-tight mb-12">
+          <div className="text-center" style={{ paddingTop: '107px', paddingBottom: '88px' }}>
+            <h2 
+              style={{
+                fontFamily: 'Inter Tight',
+                fontWeight: 400,
+                fontStyle: 'regular',
+                fontSize: '80px',
+                lineHeight: '120%',
+                letterSpacing: '-0.05em',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#000000'
+              }}
+            >
               Feature Projects
             </h2>
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {projects.map((project) => (
-              <div key={project.id} className="bg-white group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-2">
+              <div key={project.id} className="group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-2" style={{ gap:'25px', borderRadius: '32px' }}>
                 {/* Project Image */}
-                <div className="aspect-[4/3] relative overflow-hidden rounded-2xl mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  <Image
+                <div 
+                  className="relative overflow-hidden mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300"
+                  style={{
+                    maxWidth: '600px',
+                    maxHeight: '633px',
+                    aspectRatio: '600/633',
+                    borderRadius: '32px'
+                  }}
+                >
+                  <Image                    
                     src={project.image}
                     alt={project.alt}
                     fill
@@ -80,11 +100,32 @@ export function Projects() {
                 </div>
                 
                 {/* Project Info */}
-                <div>
-                  <h3 className="text-xl font-normal text-black font-inter-tight tracking-tight mb-2 group-hover:text-pink-600 transition-colors duration-300">
+                <div className="flex flex-col max-w-[415px]" style={{ gap: '20px' }}>
+                  <h3 
+                    style={{
+                      fontFamily: 'Inter Tight',
+                      fontWeight: 500,
+                      fontStyle: 'medium',
+                      fontSize: '28px',
+                      lineHeight: '1.2em',
+                      verticalAlign: 'middle',
+                      color: '#111111'
+                    }}
+                  >
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 font-inter-tight font-normal text-sm tracking-tight leading-relaxed">
+                  <p 
+                    style={{
+                      fontFamily: 'Inter Tight',
+                      fontWeight: 400,
+                      fontStyle: 'regular',
+                      fontSize: '18px',
+                      lineHeight: '25px',
+                      letterSpacing: '0%',
+                      verticalAlign: 'middle',
+                      color: '#000000'
+                    }}
+                  >
                     {project.description}
                   </p>
                 </div>

@@ -1,220 +1,414 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowUpRight, Star, Check } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 
 export function Hero() {
   return (
-    <section className="relative bg-white overflow-hidden">
-      <div className="px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Main Hero Section */}
-        <div className="py-20 lg:py-0">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="pl-20 pr-30">
-              <h1 className="text-6xl lg:text-[76px] font-normal text-black mb-6 font-inter-tight tracking-tight" style={{ lineHeight: '85px', letterSpacing: '-5px' }}>
-                We Don't Just Build Digital We Build Different
-              </h1>
-              
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link href="/services" className="text-white rounded-xl flex items-center justify-center font-inter-tight tracking-tight" style={{ backgroundColor: '#FE0B5F', width: '153px', height: '47px', fontSize:'16px'}}>
-                  <span className="font-inter-tight">Our Services</span>
-                  <ArrowUpRight className="h-4 w-4 ml-2" />
-                </Link>
-                
-                <Link href="/projects" className="text-black flex items-center justify-center font-inter-tight tracking-tight" style={{ backgroundColor: '#F2EFEB', width: '196px', height: '47px', borderRadius: '12px', fontSize: '16px'}}>
-                  <span>Our Featured Work</span>
-                  <ArrowUpRight className="h-4 w-4 ml-2" />
-                </Link>
-              </div>
-            </div>
-            
-            {/* Right Content */}
-            <div className="space-y-4 pl-36 pr-20">
-              <p className="text-black leading-relaxed font-inter-tight font-normal tracking-tight" style={{ fontSize: '16px', lineHeight: '25px' }}>
-                Your idea deserves more than just another website. <br />
-                We're the creative partners who turn your vision into digital experiences.
-              </p>
-              
-              {/* Divider */}
-              <div className="w-full h-px" style={{ backgroundColor: '#D2D2D2' }}></div>
-              
-              {/* Social Proof */}
-              <div className="flex items-center justify-between pr-5">
-                {/* Star Rating Section */}
-                <div className="flex flex-col items-start space-y-2">
-                  <div className="flex items-center space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-current" style={{ color: '#FE0B5F' }} />
-                    ))}
-                  </div>
-                  <span className="text-black font-normal font-inter-tight tracking-tight" style={{ fontSize: '14px' }}>200+ Five Star Rating</span>
-                </div>
-                
-                {/* Founder Endorsement Section */}
-                <div className="flex items-center space-x-2">
-                  <div className="flex -space-x-4">
-                    <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                      <Image
-                        src="/assets/images/Home/Hero/Ellipse 1.png"
-                        alt="Founder profile 1"
-                        width={40}
-                        height={40}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                      <Image
-                        src="/assets/images/Home/Hero/Ellipse 2.png"
-                        alt="Founder profile 2"
-                        width={40}
-                        height={40}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                      <Image
-                        src="/assets/images/Home/Hero/Ellipse 4.png"
-                        alt="Founder profile 3"
-                        width={40}
-                        height={40}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-start " style={{ lineHeight: '16px' }}>
-                    <span className="text-black font-normal font-inter-tight tracking-tight" style={{ fontSize: '16px' }}>Loved by</span>
-                    <span className="text-black font-normal font-inter-tight tracking-tight" style={{ fontSize: '16px' }}>300+ Founders</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-                {/* Trusted By Section */}
-        <div className="border-t border-gray-100 mt-8">
-          <div className="text-center">
-            <h3 className="text-xl text-gray-600 mb-4 font-inter-tight font-normal tracking-tight">
-              Trusted By 180,000+ Customers World Wide
-            </h3>
-            
-            {/* Company Logos */}
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-0 mt-2">
-              <div className="flex items-center justify-center">
-                <Image
-                  src="/assets/images/Home/Hero/companylogo1.png"
-                  width={120}
-                  height={32}
-                  alt="Company Logo 1"
-                  className="h-8 w-auto object-contain"
-                />
-              </div>
-              <div className="flex items-center justify-center">
-                <Image
-                  src="/assets/images/Home/Hero/companylogo2.png"
-                  alt="Company Logo 2"
-                  width={120}
-                  height={32}
-                  className="h-8 w-auto object-contain"
-                />
-              </div>
-              <div className="flex items-center justify-center">
-                <Image
-                  src="/assets/images/Home/Hero/companylogo3.png"
-                  alt="Company Logo 3"
-                  width={120}
-                  height={32}
-                  className="h-8 w-auto object-contain"
-                />
-              </div>
-              <div className="flex items-center justify-center">
-                <Image
-                  src="/assets/images/Home/Hero/companylogo4.png"
-                  alt="Company Logo 4"
-                  width={120}
-                  height={32}
-                  className="h-8 w-auto object-contain"
-                />
-              </div>
-              <div className="flex items-center justify-center">
-                <Image
-                  src="/assets/images/Home/Hero/companylogo5.png"
-                  alt="Company Logo 5"
-                  width={120}
-                  height={32}
-                  className="h-8 w-auto object-contain"
-                />
-              </div>
-            </div>
-            
-            {/* Get In Touch Button - Fixed Position */}
-            <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
-              {/* Outer gray container */}
-              <div 
-                className="flex items-center justify-between relative overflow-hidden"
-                style={{ 
-                  background: '#F8FAFC',
-                  border: '1px solid #CAD5E2',
-                  borderRadius: '16px'
+    <section className="max-w-[1440px] mx-auto bg-white" style={{ paddingTop: '60px' }}>
+      <div style={{ paddingLeft: '100px', paddingRight: '100px' }}>
+        <div style={{ maxWidth: '1240px' }}>
+          {/* Top Section - Title and Social Description */}
+          <div className="flex flex-row" style={{ gap: '40px', justifyContent: 'space-between' }}>
+            {/* Left Content - Title */}
+            <div className='flex'>
+              <h1 
+                style={{
+                  fontFamily: 'Inter Tight',
+                  fontWeight: 400,
+                  fontStyle: 'regular',
+                  fontSize: '80px',
+                  lineHeight: '86px',
+                  letterSpacing: '-0.03em',
+                  verticalAlign: 'middle',
+                  color: '#000000',
+                  maxWidth: '550px',
+                  margin: '0',
+                  padding: '0'
                 }}
               >
-                {/* Inner white button */}
-                <div 
-                  className="flex items-center justify-between"
+                We Don't Just Build Digital We Build Different
+              </h1>
+            </div>
+            
+            {/* Right Content - Social Description */}
+            <div className="flex flex-col justify-end pb-4">
+              <div  style={{ maxWidth: '420px', display: 'flex', flexDirection: 'column', gap: '25px' }}>
+                <p 
+                  className="text-black"
                   style={{
-                    background: '#FFFFFF',
-                    border: '1px solid #E2E8F0',
-                    margin: '10px 10px 10px 10px',
-                    borderRadius: '12px'
+                    fontFamily: 'Inter Tight',
+                    fontWeight: 400,
+                    fontStyle: 'Regular',
+                    fontSize: '18px',
+                    lineHeight: '25px',
+                    letterSpacing: '0%',
+                    verticalAlign: 'middle',
+                    color: '#000000'
                   }}
                 >
-                  <span 
-                    className="font-inter-tight font-normal text-base tracking-tight"
-                    style={{
-                      color: '#000000',
-                      margin: '6px 12px 6px 12px'
-                    }}
-                  >
-                    Get In Touch With Us
-                  </span>
-                  
-                  <div 
-                    className="w-10 h-10 rounded-full flex items-center justify-center relative"
-                    style={{
-                      background: 'linear-gradient(135deg, #FE0B5F 0%, #FF5993 100%)'
-                    }}
-                  >
-                    {/* Animated circle effect */}
-                    <div 
-                      className="absolute rounded-full animate-ping"
+                  Your idea deserves more than just another website. <br />
+                  We're the creative partners who turn your vision into digital experiences.
+                </p>
+                
+                {/* Divider */}
+                <div style={{ height: '1px', backgroundColor: '#D2D2D2' }}></div>
+                
+                {/* Social Proof */}
+                <div style={{ display: 'flex', flexDirection: 'row', gap: '32px', alignItems: 'center' }}>
+                  {/* Star Rating Section */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'flex-start' }}>
+                    <div style={{ display: 'flex', flexDirection: 'row', gap: '5px', width: '120px', alignItems: 'center' }}>
+                      {[...Array(5)].map((_, i) => (
+                        <svg key={i} className="w-5 h-5 text-pink-500 fill-current" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <span 
+                      className="text-black"
                       style={{
-                        width: '36px',
-                        height: '36px',
-                        background: 'linear-gradient(135deg, #FE0B5F 0%, #FF5993 100%)',
-                        opacity: '0.3'
+                        fontFamily: 'Inter Tight',
+                        fontWeight: 400,
+                        fontStyle: 'regular',
+                        fontSize: '16px',
+                        lineHeight: '100%',
+                        letterSpacing: '0%',
+                        verticalAlign: 'middle',
+                        color: '#000000'
                       }}
-                    />
-                    <svg 
-                      className="w-5 h-5 text-white relative z-10" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 20 20"
                     >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={2.5} 
-                        d="M5 13l4 4L19 7" 
-                      />
-                    </svg>
+                      200+ Five Star Rating
+                    </span>
                   </div>
+                  
+                  {/* Founder Endorsement Section */}
+                  <div style={{ display: 'flex', flexDirection: 'row', gap: '15px', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <div className="flex -space-x-4">
+                      <div 
+                        className="rounded-full overflow-hidden"
+                        style={{
+                          width: '41.08px',
+                          height: '41.08px',
+                          border: '0.86px solid #E9E7E6',
+                          backgroundColor: '#00000033'
+                        }}
+                      >
+                        <Image
+                          src="/assets/images/Home/Hero/Ellipse 1.png"
+                          alt="User profile 1"
+                          width={32}
+                          height={32}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div 
+                        className="rounded-full overflow-hidden"
+                        style={{
+                          width: '41.08px',
+                          height: '41.08px',
+                          border: '0.86px solid #E9E7E6',
+                          backgroundColor: '#00000033'
+                        }}
+                      >
+                        <Image
+                          src="/assets/images/Home/Hero/Ellipse 2.png"
+                          alt="User profile 2"
+                          width={32}
+                          height={32}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div 
+                        className="rounded-full overflow-hidden"
+                        style={{
+                          width: '41.08px',
+                          height: '41.08px',
+                          border: '0.86px solid #E9E7E6',
+                          backgroundColor: '#00000033'
+                        }}
+                      >
+                        <Image
+                          src="/assets/images/Home/Hero/Ellipse 4.png"
+                          alt="User profile 3"
+                          width={32}
+                          height={32}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                    <div className='flex flex-col'>
+                      <span 
+                        className="text-black"
+                        style={{
+                          fontFamily: 'Inter Tight',
+                          fontWeight: 400,
+                          fontStyle: 'regular',
+                          fontSize: '16px',
+                          lineHeight: '100%',
+                          letterSpacing: '0%',
+                          verticalAlign: 'middle',
+                          color: '#000000'
+                        }}
+                      >
+                        Loved by
+                      </span>
+                      <span 
+                        className="text-black"
+                        style={{
+                          fontFamily: 'Inter Tight',
+                          fontWeight: 400,
+                          fontStyle: 'regular',
+                          fontSize: '16px',
+                          lineHeight: '100%',
+                          letterSpacing: '0%',
+                          verticalAlign: 'middle',
+                          color: '#000000'
+                        }}
+                      >
+                        300+ Founders
+                      </span>
+                    </div>               
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+          {/* Bottom Section - CTA Buttons */}
+          <div className="flex flex-row sm:flex-row items-start pt-10" style={{ gap: '10px' }}>
+            <Link 
+              href="/services" 
+              className="text-white rounded-xl flex items-center justify-center"
+              style={{ 
+                backgroundColor: '#FE0B5F', 
+                maxWidth: '153px', 
+                borderRadius: '12px',
+                padding: '14px 22px',
+                gap: '10px'
+              }}
+            >
+              <div 
+                style={{
+                  fontFamily: 'Inter Tight',
+                  fontWeight: 400,
+                  fontStyle: 'regular',
+                  fontSize: '16px',
+                  lineHeight: '120%',
+                  letterSpacing: '-0.5px',
+                  color: '#FFFFFF'
+                }}
+              >
+                Our Services
+              </div>
+              <ArrowUpRight 
+                className="text-white" 
+                style={{ 
+                  width: '10.94px', 
+                  height: '11px',
+                  marginLeft: '10.85px'
+                }} 
+              />
+            </Link>
+            
+            <Link 
+              href="/projects" 
+              className="text-black flex items-center justify-center"
+              style={{ 
+                backgroundColor: '#F2EFEB', 
+                maxWidth: '196px', 
+                borderRadius: '12px',
+                padding: '14px 22px',
+                gap: '10px'
+              }}
+            >
+              <div 
+                style={{
+                  fontFamily: 'Inter Tight',
+                  fontWeight: 400,
+                  fontStyle: 'regular',
+                  fontSize: '16px',
+                  lineHeight: '120%',
+                  letterSpacing: '-0.5px',
+                  color: '#000000'
+                }}
+              >
+                Our Featured Work
+              </div>
+              <ArrowUpRight 
+                className="text-black" 
+                style={{ 
+                  width: '10.94px', 
+                  height: '11px',
+                  marginLeft: '10.85px'
+                }} 
+              />
+            </Link>
+          </div>
+          
+          {/* Trusted By Section */}
+          <div style={{ paddingTop: '80px' }}>
+            <div className="text-center" style={{ display: 'flex', flexDirection: 'column', gap: '33px' }}>
+              <h3 
+                style={{
+                  fontFamily: 'Neue Montreal',
+                  fontWeight: 400,
+                  fontStyle: 'regular',
+                  fontSize: '20px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  textAlign: 'center',
+                  textTransform: 'capitalize',
+                  color: '#1F1F20'
+                }}
+              >
+                Trusted By 180,000+ Customers World Wide
+              </h3>
+              
+              {/* Company Logos */}
+              <div 
+                className="flex items-center"
+                style={{ 
+                  justifyContent: 'space-between',
+                  gap: '4px',
+                  height: '33.55px'
+                }}
+              >
+                <div className="flex items-center justify-center">
+                  <Image
+                    src="/assets/images/Home/Hero/companylogo1.png"
+                    width={120}
+                    height={32}
+                    alt="Company Logo 1"
+                    className="object-contain"
+                  />
+                </div>
+                <div className="flex items-center justify-center">
+                  <Image
+                    src="/assets/images/Home/Hero/companylogo2.png"
+                    alt="Company Logo 2"
+                    width={120}
+                    height={32}
+                    className="object-contain"
+                  />
+                </div>
+                <div className="flex items-center justify-center">
+                  <Image
+                    src="/assets/images/Home/Hero/companylogo3.png"
+                    alt="Company Logo 3"
+                    width={120}
+                    height={32}
+                    className="object-contain"
+                  />
+                </div>
+                <div className="flex items-center justify-center">
+                  <Image
+                    src="/assets/images/Home/Hero/companylogo4.png"
+                    alt="Company Logo 4"
+                    width={120}
+                    height={32}
+                    className="object-contain"
+                  />
+                </div>
+                <div className="flex items-center justify-center">
+                  <Image
+                    src="/assets/images/Home/Hero/companylogo5.png"
+                    alt="Company Logo 5"
+                    width={120}
+                    height={32}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Get In Touch Button - Fixed Position */}
+          <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
+            {/* Outer gray container */}
+            <div 
+              className="flex items-center justify-between relative overflow-hidden"
+              style={{ 
+                background: '#0000001A',
+                borderRadius: '21.13px',
+                width: '255px',
+                backdropFilter: 'blur(31.69px)',
+                WebkitBackdropFilter: 'blur(31.69px)'
+              }}
+            >
+              {/* Inner white button */}
+              <div 
+                className="flex items-center justify-between"
+                style={{
+                  background: '#F8FAFC',
+                  border: '1.32px solid #CAD5E2',
+                  borderRadius: '10.56px',
+                  width: '199px',
+                  height: '45px',
+                  margin: '13px 13px 13px 13px',
+                  padding: '13px 16px 13px 16px'
+                }}
+              >
+                <span 
+                  style={{
+                    fontFamily: 'Inter',
+                    fontWeight: 500,
+                    fontStyle: 'medium',
+                    fontSize: '16px',
+                    lineHeight: '120%',
+                    letterSpacing: '-5%',
+                    textAlign: 'center',
+                    color: '#000000'
+                  }}
+                >
+                  Get In Touch With Us
+                </span>
+                
+                <div 
+                  className="rounded-full flex items-center justify-center relative"
+                  style={{
+                    background: 'linear-gradient(135deg, #FE0B5F 0%, #FF5993 100%)',
+                    width: '46.22px',
+                    height: '46.22px',
+                    position: 'absolute',
+                    // top: '7.85px',
+                    left: '193.54px',
+                    zIndex: 10
+                  }}
+                >
+                  {/* Animated outer circle - pulsing effect */}
+                  <div 
+                    className="absolute rounded-full"
+                    style={{
+                      width: '59.42px',
+                      height: '59.42px',
+                      background: '#FE0B5F4D',
+                      animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                      zIndex: -1
+                    }}
+                  />
+                  
+                  {/* Inner circle with checkmark */}
+                  <svg 
+                    className="w-5 h-5 text-white relative z-10" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2.5} 
+                      d="M5 13l4 4L19 7" 
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-
+        
       </div>
     </section>
   )

@@ -25,38 +25,63 @@ const ethosCards = [
 
 export function Ethos() {
   return (
-    <section className="py-20" style={{ backgroundColor: '#F4F4F4' }}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            The Enzari Ethos
-          </h2>
-          <p className="text-xl text-gray-600">
-            This is how we design. This is how we grow.
-          </p>
-        </div>
+    <section className="pt-[120px] pb-[120px]" style={{ backgroundColor: '#F4F4F4' }}>
+      <div>
+        
+          <div className="text-center mb-16" style={{ gap:'24px'}}>
+            <h2 
+              style={{
+                fontFamily: 'Inter Tight',
+                fontWeight: 400,
+                fontStyle: 'regular',
+                fontSize: '80px',
+                lineHeight: '1.2em',
+                letterSpacing: '-0.05em',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#000000',                
+              }}
+            >
+              The Enzari Ethos
+            </h2>
+            <p 
+              style={{
+                fontFamily: 'Inter Tight',
+                fontWeight: 400,
+                fontSize: '22px',
+                lineHeight: '25px',
+                letterSpacing: '0.03em',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#000000'
+              }}
+            >
+              This is how we design. This is how we grow.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {ethosCards.map((card) => (
-            <div key={card.id} className="text-center">
-              {/* Image Card */}
-              <div className="relative mb-6 overflow-hidden rounded-2xl shadow-lg">
-                <Image
-                  src={card.image}
-                  alt={card.description}
-                  width={400}
-                  height={300}
-                  className="w-full h-auto object-cover"
-                />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px]">
+            {ethosCards.map((card) => (
+              <div key={card.id} className="text-left">
+                {/* Image Card */}
+                <div className="relative mb-[8px] overflow-hidden rounded-2xl shadow-lg">
+                  <Image
+                    src={card.image}
+                    alt={card.description}
+                    width={400}
+                    height={300}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                
+                {/* Caption */}
+                <p className="text-gray-700 text-sm leading-relaxed font-medium">
+                  {card.description}
+                </p>
               </div>
-              
-              {/* Caption */}
-              <p className="text-gray-700 text-sm leading-relaxed font-medium">
-                {card.description}
-              </p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        
       </div>
     </section>
   )
