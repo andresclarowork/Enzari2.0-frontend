@@ -71,7 +71,7 @@ export function Hero() {
                         fontWeight: 400,
                         fontStyle: 'regular',
                         fontSize: '16px',
-                        lineHeight: '100%',
+                        lineHeight: '1.0em',
                         letterSpacing: '0%',
                         verticalAlign: 'middle',
                         color: '#000000'
@@ -144,7 +144,7 @@ export function Hero() {
                           fontWeight: 400,
                           fontStyle: 'regular',
                           fontSize: '16px',
-                          lineHeight: '100%',
+                          lineHeight: '1.0em',
                           letterSpacing: '0%',
                           verticalAlign: 'middle',
                           color: '#000000'
@@ -159,7 +159,7 @@ export function Hero() {
                           fontWeight: 400,
                           fontStyle: 'regular',
                           fontSize: '16px',
-                          lineHeight: '100%',
+                          lineHeight: '1.0em',
                           letterSpacing: '0%',
                           verticalAlign: 'middle',
                           color: '#000000'
@@ -253,7 +253,7 @@ export function Hero() {
                   fontWeight: 400,
                   fontStyle: 'regular',
                   fontSize: '20px',
-                  lineHeight: '100%',
+                  lineHeight: '1.0em',
                   letterSpacing: '0%',
                   textAlign: 'center',
                   textTransform: 'capitalize',
@@ -353,7 +353,7 @@ export function Hero() {
                     fontWeight: 500,
                     fontStyle: 'medium',
                     fontSize: '16px',
-                    lineHeight: '120%',
+                    lineHeight: '1.2em',
                     letterSpacing: '-5%',
                     textAlign: 'center',
                     color: '#000000'

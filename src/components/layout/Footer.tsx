@@ -70,7 +70,7 @@ export function Footer() {
                     fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 700,
                     fontSize: '16px',
-                    lineHeight: '100%',
+                    lineHeight: '1.0em',
                     letterSpacing: '0px',
                     verticalAlign: 'middle',
                     color: '#252A33'

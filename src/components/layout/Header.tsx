@@ -47,7 +47,7 @@ export function Header() {
                     fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 400,
                     fontSize: '16px',
-                    lineHeight: '120%',
+                    lineHeight: '1.2em',
                     textAlign: 'center',
                     color: '#000000'
                   }}
@@ -81,7 +81,7 @@ export function Header() {
                   style={{fontFamily: 'var(--font-sharp-sans)',
                   fontWeight: 500,
                   fontSize: '16px',
-                  lineHeight: '100%',
+                  lineHeight: '1.0em',
                   letterSpacing: '-0.04em',
                   textAlign: 'center',
                   color: '#FFFFFF'
@@ -121,7 +121,7 @@ export function Header() {
                       fontFamily: 'Inter Tight',
                       fontWeight: 400,
                       fontSize: '16px',
-                      lineHeight: '120%',
+                      lineHeight: '1.2em',
                       textAlign: 'center',
                       color: '#000000'
                     }}
@@ -150,7 +150,7 @@ export function Header() {
                     fontWeight: 500,
                     fontStyle: 'medium',
                     fontSize: '16px',
-                    lineHeight: '100%',
+                    lineHeight: '1.0em',
                     letterSpacing: '4%',
                     textAlign: 'center',
                     color: '#FFFFFF',

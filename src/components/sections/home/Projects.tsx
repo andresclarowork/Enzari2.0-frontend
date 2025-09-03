@@ -58,7 +58,7 @@ export function Projects() {
                 fontWeight: 400,
                 fontStyle: 'regular',
                 fontSize: '80px',
-                lineHeight: '120%',
+                lineHeight: '1.2em',
                 letterSpacing: '-0.05em',
                 textAlign: 'center',
                 verticalAlign: 'middle',

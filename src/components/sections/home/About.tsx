@@ -203,7 +203,7 @@ export function About() {
                         fontWeight: 400,
                         fontStyle: 'regular',
                         fontSize: '16px',
-                        lineHeight: '120%',
+                        lineHeight: '1.2em',
                         letterSpacing: '-0.05em',          
                       }}
                     >
@@ -234,7 +234,7 @@ export function About() {
                         fontWeight: 400,
                         fontStyle: 'regular',
                         fontSize: '16px',
-                        lineHeight: '120%',
+                        lineHeight: '1.2em',
                         letterSpacing: '-0.05em',          
                       }}
                     >

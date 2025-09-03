@@ -24,7 +24,7 @@ const teamMembers = [
   {
     id: 4,
     name: "Shery Butt",
-    role: "Ui/UX Designer",
+    role: "UI/UX Designer",
     image: "/assets/images/Home/Team/team4.png"
   }
 ]
