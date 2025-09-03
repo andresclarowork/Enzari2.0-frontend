@@ -18,7 +18,7 @@ export function Header() {
 
   return (
     <header className="bg-white sticky top-0 z-50">
-      <nav style={{ paddingTop: '30px', paddingLeft: '40px', paddingRight: '40px' }}>
+      <nav style={{ paddingTop: '30px', paddingLeft: '40px', paddingRight: '40px', paddingBottom: '10px' }}>
         <div>
           <div className="flex justify-between items-center">
             {/* Logo */}

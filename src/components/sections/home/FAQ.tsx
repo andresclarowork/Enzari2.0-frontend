@@ -38,7 +38,7 @@ export function FAQ() {
   }
 
   return (
-    <section className="flex flex-row items-center justify-between max-w-[1440px] mx-auto pt-[120px] pl-[100px] pr-[100px] bg-white">
+    <section className="flex flex-row items-center justify-between max-w-[1440px] mx-auto pt-[120px] pb-[120px] pl-[100px] pr-[100px] bg-white">
       
       <div 
         className="flex flex-row"
