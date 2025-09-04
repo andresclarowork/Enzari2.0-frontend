@@ -138,7 +138,7 @@ export function Ethos() {
           }
         }
         .infinite-flow {
-          animation: flow 50s linear infinite;
+          animation: flow 40s linear infinite;
           animation-fill-mode: none;
         }
       `}</style>
