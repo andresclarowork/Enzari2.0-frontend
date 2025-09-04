@@ -4,7 +4,7 @@ import { ArrowUpRight } from 'lucide-react'
 
 export function About() {
   return (
-    <section className="bg-white, max-w-[1440px] mx-auto" style={{ paddingTop: '80px' }}>
+    <section className="bg-white, max-w-[1440px] mx-auto" style={{ paddingTop: '80.45px' }}>
       <div style={{ paddingLeft: '100px', paddingRight: '100px' }}>
           {/* Intro Video Section */}
           <div className="relative overflow-hidden shadow-2xl" style={{ borderRadius: '32px' }}>
@@ -56,17 +56,19 @@ export function About() {
                       padding: '8px 16px',
                       backdropFilter: 'blur(24px)',
                       WebkitBackdropFilter: 'blur(24px)',
-                      gap: '8px'
+                      gap: '8px',
+                      marginLeft:'7px'
                     }}
                   >
-                    <div className="flex flex-row -space-x-2">
+                    <div className="flex flex-row -space-x-4 justify-between">
                       <div 
-                        className="rounded-full overflow-hidden"
+                        className="rounded-full overflow-hidden relative"
                         style={{
                           width: '48px',
                           height: '48px',
                           backgroundColor: '#00000033',
-                          border: '1px solid #E9E7E6'
+                          border: '1px solid #E9E7E6',
+                          zIndex: 3
                         }}
                       >
                         <Image
@@ -78,12 +80,13 @@ export function About() {
                         />
                       </div>
                       <div 
-                        className="rounded-full overflow-hidden"
+                        className="rounded-full overflow-hidden relative"
                         style={{
                           width: '48px',
                           height: '48px',
                           backgroundColor: '#00000033',
-                          border: '1px solid #E9E7E6'
+                          border: '1px solid #E9E7E6',
+                          zIndex: 2
                         }}
                       >
                         <Image
@@ -95,12 +98,13 @@ export function About() {
                         />
                       </div>
                       <div 
-                        className="rounded-full overflow-hidden"
+                        className="rounded-full overflow-hidden relative"
                         style={{
                           width: '48px',
                           height: '48px',
                           backgroundColor: '#00000033',
-                          border: '1px solid #E9E7E6'
+                          border: '1px solid #E9E7E6',
+                          zIndex: 1
                         }}
                       >
                         <Image

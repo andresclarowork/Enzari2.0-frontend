@@ -49,9 +49,9 @@ const ethosImages = [
 
 export function Ethos() {
   return (
-    <section className="pt-[80px] pb-[80px]" style={{ backgroundColor: '#F4F4F4' }}>
-      <div className="flex flex-col items-center">
-        <div className="flex flex-col items-center text-center mb-16" style={{ gap:'24px'}}>
+    <section className="pt-[100px] pb-[100px]" style={{ backgroundColor: '#F4F4F4', borderRadius: '32px' }}>
+      <div className="flex flex-col items-center gap-10">
+        <div className="flex flex-col items-center text-center" style={{ gap:'24px'}}>
           <h2 
             style={{
               fontFamily: 'var(--font-inter-tight)',
@@ -62,7 +62,7 @@ export function Ethos() {
               letterSpacing: '-0.05em',
               textAlign: 'center',
               verticalAlign: 'middle',
-              color: '#000000',                
+              color: '#000000',                           
             }}
           >
             The Enzari Ethos
@@ -71,9 +71,10 @@ export function Ethos() {
             style={{
               fontFamily: 'var(--font-inter-tight)',
               fontWeight: 400,
+              fontStyle: 'regular',
               fontSize: '22px',
               lineHeight: '25px',
-              letterSpacing: '0.03em',
+              letterSpacing: '-0.03em',
               textAlign: 'center',
               verticalAlign: 'middle',
               color: '#000000'
@@ -138,7 +139,7 @@ export function Ethos() {
           }
         }
         .infinite-flow {
-          animation: flow 40s linear infinite;
+          animation: flow 30s linear infinite;
           animation-fill-mode: none;
         }
       `}</style>

@@ -50,7 +50,7 @@ export function Testimonials() {
                 color: '#000000'
               }}
             >
-              Our Happy Customes
+              Our Happy Customers
             </h2>
           </div>
           

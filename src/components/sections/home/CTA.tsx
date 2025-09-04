@@ -16,7 +16,7 @@ export function CTA() {
         />
       </div>
       
-      <div className="flex flex-col relative z-10 pt-[103px] pb-[103px] gap-[40px] max-w-[563px] mx-auto">
+      <div className="flex flex-col relative z-10 pt-[103px] pb-[103px] gap-[40px] mx-auto">
         
         <div className="flex flex-col text-center">
           <h2 

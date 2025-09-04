@@ -33,8 +33,8 @@ export function Team() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   return (
-    <section className="pt-[148px] pb-[120px] bg-white">
-      <div className="flex flex-col pl-[100px] gap-[40px]">
+    <section className="pt-[148px] pl-[100px] pb-[120px] bg-white">
+      <div className="flex flex-col gap-[40px]">
         
           {/* Title */}
           <div className="flex flex-row">
@@ -66,6 +66,7 @@ export function Team() {
                       backgroundColor: '#FE0B5F',
                       width: '367px',
                       height: '460px',
+                      
                       borderRadius: '24px'
                     }}
                   >
@@ -95,7 +96,7 @@ export function Team() {
             </div>
             
             {/* Pagination Dots - 5 dots as shown in screenshot */}
-            <div className="flex justify-center mt-8 space-x-2">
+            <div className="flex justify-center mt-[34px] space-x-2">
               {[0, 1, 2, 3, 4].map((index) => (
                 <button
                   key={index}

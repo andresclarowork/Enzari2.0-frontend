@@ -52,15 +52,15 @@ export function Services() {
          
       <div className="flex flex-row justify-between w-full grid grid-cols-1 lg:grid-cols-3 gap-16 items-stretch" style={{ minHeight: '600px' }}>
         {/* Left Side - Services List + Phone at bottom */}
-        <div className={`flex lg:order-1 flex flex-col justify-end pl-[30px] transition-all duration-300 ${hoveredService >= 0 ? 'opacity-100' : 'opacity-0'}`}>                   
+        <div className={`flex flex flex-col justify-end pl-[30px] transition-all duration-300 ${hoveredService >= 0 ? 'opacity-100' : 'opacity-0'}`}>                   
           <div className="flex flex-col items-start gap-5">
             <div className="w-[346px] h-[286px] relative overflow-hidden shadow-2xl transition-all duration-300" style={{ borderRadius: '24px', backgroundColor:'#F2EFEB' }}>
-            <Image
-              src="/assets/images/Home/Services/Service1.png"
-              alt="Mobile App Interface 1"
-              fill
-              className="object-cover transition-all duration-300"
-            />
+              <Image
+                src="/assets/images/Home/Services/Service1.png"
+                alt="Mobile App Interface 1"
+                fill
+                className="object-cover transition-all duration-300"
+              />
             </div>
             <p 
               style={{
@@ -82,7 +82,7 @@ export function Services() {
         </div>
         
         {/* Center - Title and Buttons */}
-        <div className="flex text-center flex flex-col lg:order-2 max-w-[508px]" style={{ gap:'50px'}}>          
+        <div className="flex flex-col text-center" style={{ gap:'50px'}}>          
           <h3 
             style={{
               fontFamily: 'var(--font-inter-tight)',
@@ -91,23 +91,11 @@ export function Services() {
               fontSize: '22px',
               lineHeight: '25px',
               letterSpacing: '-0.04em',
-              textAlign: 'center',
-              verticalAlign: 'middle',
+              textAlign: 'center',        
               color: '#111111',           
             }}
-          >
-            <span 
-              style={{
-                fontFamily: 'var(--font-saans-trial)',
-                fontWeight: 500,
-                fontSize: '16px',
-                lineHeight: '1.2em',
-                letterSpacing: '-0.05em',
-                color: '#FFFFFF'
-              }}
-            >
-              Our Services
-            </span>
+          >           
+            Our Services            
           </h3>
           <div className="flex flex-col" style={{ gap:'39px'}}>
             {services.map((service, index) => (
@@ -198,7 +186,7 @@ export function Services() {
         </div>
         
         {/* Right Side - Phone at top */}      
-        <div className={`flex lg:order-3 flex flex-col justify-start items-end pr-[30px] transition-all duration-300 ${hoveredService >= 0 ? 'opacity-100' : 'opacity-0'}`}>                    
+        <div className={`flex flex flex-col justify-start items-end pr-[30px] transition-all duration-300 ${hoveredService >= 0 ? 'opacity-100' : 'opacity-0'}`}>                    
           <div className="flex flex-col items-start gap-5">
             <div className="w-[346px] h-[286px] relative overflow-hidden shadow-2xl transition-all duration-300" style={{ borderRadius: '24px', backgroundColor:'#F2EFEB' }}>
             <Image
