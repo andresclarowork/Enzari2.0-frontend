@@ -29,7 +29,7 @@ export function Footer() {
           
           <div className="flex flex-row" style={{justifyContent:'space-between'}}>
             {/* Left Column - Branding */}
-            <div className="flex flex-col max-w-[397px]" style={{gap:'40px'}}>
+            <div className="flex flex-col" style={{gap:'40px'}}>
               <Link href="/" className="flex items-center">
                 <Image
                   src="/assets/images/Logo.png"
