@@ -134,11 +134,11 @@ export function Ethos() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-30%);
           }
         }
         .infinite-flow {
-          animation: flow 60s linear infinite;
+          animation: flow 50s linear infinite;
           animation-fill-mode: none;
         }
       `}</style>
