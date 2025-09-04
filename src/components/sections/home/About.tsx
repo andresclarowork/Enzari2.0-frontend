@@ -19,11 +19,11 @@ export function About() {
           </div>
           
           {/* Single Column Layout */}
-          <div className="flex flex-col justify-center items-center mx-w-[1022px]" style={{ paddingTop: '120px' }}>
+          <div className="flex flex-col justify-center items-center" style={{ paddingTop: '120px' }}>
             {/* Headline with Social Proof */}
             <div className="flex flex-col" 
               style={{ 
-                maxWidth: '1022px',
+                // maxWidth: '1022px',
                 gap: '50px'
               }}
             >
@@ -46,7 +46,7 @@ export function About() {
                 >
                   Enzari Builds Demand.
                 </div>
-                <div className="flex flex-row items-center justify-between">
+                <div className="flex flex-row items-center justify-between " style={{gap: '10px'}}>
                   {/* Social Proof Badge */}
                   <div 
                     className="flex items-center" 
@@ -140,6 +140,7 @@ export function About() {
                     
                   </div>
                   <span 
+                  className="flex"
                     style={{
                       fontFamily: 'var(--font-inter-tight)',
                       fontWeight: 400,

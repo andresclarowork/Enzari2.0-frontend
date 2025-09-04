@@ -1,30 +1,65 @@
-﻿import Link from 'next/link'
+﻿'use client'
+
+import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
+import { useState } from 'react'
 
 const services = [
-  { name: 'Product Design', isHighlighted: true },
-  { name: 'Branding', isHighlighted: false },
-  { name: 'Graphic Designing', isHighlighted: false },
-  { name: 'AI Production', isHighlighted: false },
-  { name: 'Motion Design', isHighlighted: false },
-  { name: 'Web Design', isHighlighted: false },
+  { 
+    name: 'Product Design', 
+    isHighlighted: true,
+    leftImage: '/assets/images/Home/Services/Service1.png',
+    rightImage: '/assets/images/Home/Services/Service2.png'
+  },
+  { 
+    name: 'Branding', 
+    isHighlighted: false,
+    leftImage: '/assets/images/Home/Services/Service1.png',
+    rightImage: '/assets/images/Home/Services/Service2.png'
+  },
+  { 
+    name: 'Graphic Designing', 
+    isHighlighted: false,
+    leftImage: '/assets/images/Home/Services/Service1.png',
+    rightImage: '/assets/images/Home/Services/Service2.png'
+  },
+  { 
+    name: 'AI Production', 
+    isHighlighted: false,
+    leftImage: '/assets/images/Home/Services/Service1.png',
+    rightImage: '/assets/images/Home/Services/Service2.png'
+  },
+  { 
+    name: 'Motion Design', 
+    isHighlighted: false,
+    leftImage: '/assets/images/Home/Services/Service1.png',
+    rightImage: '/assets/images/Home/Services/Service2.png'
+  },
+  { 
+    name: 'Web Design', 
+    isHighlighted: false,
+    leftImage: '/assets/images/Home/Services/Service1.png',
+    rightImage: '/assets/images/Home/Services/Service2.png'
+  },
 ]
 
 export function Services() {
+  const [hoveredService, setHoveredService] = useState(-1) // Default to no service hovered
+
   return (
     <section className="flex pt-[132px] pb-[120px] bg-white">
          
       <div className="flex flex-row justify-between w-full grid grid-cols-1 lg:grid-cols-3 gap-16 items-stretch" style={{ minHeight: '600px' }}>
         {/* Left Side - Services List + Phone at bottom */}
-        <div className="flex lg:order-1 flex flex-col justify-end pl-[30px]">                   
+        <div className={`flex lg:order-1 flex flex-col justify-end pl-[30px] transition-all duration-300 ${hoveredService >= 0 ? 'opacity-100' : 'opacity-0'}`}>                   
           <div className="flex flex-col items-start gap-5">
-            <div className="w-[346px] h-[286px] relative overflow-hidden shadow-2xl" style={{ borderRadius: '24px', backgroundColor:'#F2EFEB' }}>
+            <div className="w-[346px] h-[286px] relative overflow-hidden shadow-2xl transition-all duration-300" style={{ borderRadius: '24px', backgroundColor:'#F2EFEB' }}>
             <Image
               src="/assets/images/Home/Services/Service1.png"
               alt="Mobile App Interface 1"
               fill
-              className="object-cover"
+              className="object-cover transition-all duration-300"
             />
             </div>
             <p 
@@ -78,7 +113,7 @@ export function Services() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="relative"
+                className="relative cursor-pointer transition-all duration-300"
                 style={{
                   fontFamily: 'var(--font-inter-tight)',
                   fontWeight: 400,
@@ -89,8 +124,10 @@ export function Services() {
                   textAlign: 'center',
                   verticalAlign: 'middle',
                   color: service.isHighlighted ? '#000000' : '#000000',
-                  opacity: service.isHighlighted ? '1' : '0.3'
+                  opacity: hoveredService === index ? '1' : '0.3'
                 }}
+                onMouseEnter={() => setHoveredService(index)}
+                onMouseLeave={() => setHoveredService(-1)} // Reset to no service on leave
               >
                 {service.name}                
               </div>
@@ -161,14 +198,14 @@ export function Services() {
         </div>
         
         {/* Right Side - Phone at top */}      
-        <div className="flex lg:order-3 flex flex-col justify-start items-end pr-[30px]">                    
+        <div className={`flex lg:order-3 flex flex-col justify-start items-end pr-[30px] transition-all duration-300 ${hoveredService >= 0 ? 'opacity-100' : 'opacity-0'}`}>                    
           <div className="flex flex-col items-start gap-5">
-            <div className="w-[346px] h-[286px] relative overflow-hidden shadow-2xl" style={{ borderRadius: '24px', backgroundColor:'#F2EFEB' }}>
+            <div className="w-[346px] h-[286px] relative overflow-hidden shadow-2xl transition-all duration-300" style={{ borderRadius: '24px', backgroundColor:'#F2EFEB' }}>
             <Image
               src="/assets/images/Home/Services/Service2.png"
-              alt="Mobile App Interface 1"
+              alt="Mobile App Interface 2"
               fill
-              className="object-cover"
+              className="object-cover transition-all duration-300"
             />
             </div>
             <p 
