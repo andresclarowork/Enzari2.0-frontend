@@ -22,7 +22,7 @@ export function Intro() {
       
       <div className="flex flex-row items-center gap-[10px] justify-center">
         <p        
-          className="flex flex-col items-center justify-center text-center"
+          className="flex"
           style={{
           fontFamily: 'var(--font-inter-tight)',
           fontWeight: 400,
