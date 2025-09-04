@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
 
 const navigation = [
@@ -15,6 +16,7 @@ const navigation = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   return (
     <header className="bg-white sticky top-0 z-50">
@@ -38,29 +40,36 @@ export function Header() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center" style={{ gap: '25px' }}>
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="transition-all duration-200 flex items-center justify-center hover:font-bold"
-                  style={{
-                    fontFamily: 'var(--font-inter-tight)',
-                    fontWeight: 400,
-                    fontSize: '16px',
-                    lineHeight: '1.2em',
-                    textAlign: 'center',
-                    color: '#000000'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.fontWeight = '700'
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.fontWeight = '400'
-                  }}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navigation.map((item) => {
+                const isActive = pathname === item.href
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="transition-all duration-200 flex items-center justify-center hover:font-bold"
+                    style={{
+                      fontFamily: 'var(--font-inter-tight)',
+                      fontWeight: isActive ? 700 : 400,
+                      fontSize: '16px',
+                      lineHeight: '1.2em',
+                      textAlign: 'center',
+                      color: '#000000'
+                    }}
+                    onMouseEnter={(e) => {
+                      if (!isActive) {
+                        e.currentTarget.style.fontWeight = '700'
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      if (!isActive) {
+                        e.currentTarget.style.fontWeight = '400'
+                      }
+                    }}
+                  >
+                    {item.name}
+                  </Link>
+                )
+              })}
             </div>
 
             {/* CTA Button */}
@@ -112,30 +121,37 @@ export function Header() {
           {mobileMenuOpen && (
             <div className="md:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block px-3 py-2 transition-all duration-200 flex items-center justify-center hover:font-bold"
-                    style={{
-                      fontFamily: 'Inter Tight',
-                      fontWeight: 400,
-                      fontSize: '16px',
-                      lineHeight: '1.2em',
-                      textAlign: 'center',
-                      color: '#000000'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.fontWeight = '700'
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.fontWeight = '400'
-                    }}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+                {navigation.map((item) => {
+                  const isActive = pathname === item.href
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="block px-3 py-2 transition-all duration-200 flex items-center justify-center hover:font-bold"
+                      style={{
+                        fontFamily: 'Inter Tight',
+                        fontWeight: isActive ? 700 : 400,
+                        fontSize: '16px',
+                        lineHeight: '1.2em',
+                        textAlign: 'center',
+                        color: '#000000'
+                      }}
+                      onMouseEnter={(e) => {
+                        if (!isActive) {
+                          e.currentTarget.style.fontWeight = '700'
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (!isActive) {
+                          e.currentTarget.style.fontWeight = '400'
+                        }
+                      }}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )
+                })}
                 
                 {/* Mobile CTA Button */}
                 <Link

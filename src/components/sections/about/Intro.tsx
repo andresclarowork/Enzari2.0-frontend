@@ -14,30 +14,30 @@ export function Intro() {
           letterSpacing: '-0.04em',
           verticalAlign: 'middle',
           color: '#000000',
-          textAlign: 'justify',
+          
         }}
       >
         We are passionate about creating seamless digital 
       </p>
       
-      <div className="flex flex-row">
+      <div className="flex flex-row items-center gap-[10px] justify-center">
         <p        
+          className="flex flex-col items-center justify-center text-center"
           style={{
           fontFamily: 'var(--font-inter-tight)',
           fontWeight: 400,
           fontStyle: 'regular',
           fontSize: '60px',
           lineHeight: '1.2em',
-          letterSpacing: '-0.04em',
-          verticalAlign: 'middle',
+          letterSpacing: '-0.04em',          
           color: '#000000',
-          textAlign: 'justify',
+          
           }}
         >
           experiences, 
         </p>
         <div 
-          className="flex flex-row items-center" 
+          className="flex flex-row items-center justify-center" 
           style={{ 
             backgroundColor: '#DADADA99', 
             borderRadius: '16px', 
@@ -45,6 +45,7 @@ export function Intro() {
             backdropFilter: 'blur(24px)',
             WebkitBackdropFilter: 'blur(24px)',
             gap: '8px',
+            height: '64px',
             maxWidth: '382px',
           }}
         >
@@ -128,6 +129,7 @@ export function Intro() {
           </div>             
         </div>  
         <p
+          className="flex"
           style={{
             fontFamily: 'var(--font-inter-tight)',
             fontWeight: 400,
@@ -137,7 +139,7 @@ export function Intro() {
             letterSpacing: '-0.04em',
             verticalAlign: 'middle',
             color: '#000000',
-            textAlign: 'justify',
+            
           }}
         > 
           and we also collaborate

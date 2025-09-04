@@ -45,7 +45,7 @@ const services = [
 ]
 
 export function Services() {
-  const [hoveredService, setHoveredService] = useState(-1) // Default to no service hovered
+  const [hoveredService, setHoveredService] = useState(0) // Default to first service active
 
   return (
     <section className="flex pt-[132px] pb-[120px] bg-white">
