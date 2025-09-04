@@ -86,7 +86,7 @@ export function Ethos() {
         {/* Continuous Flowing Animation */}
         <div className="relative w-full h-[486px] overflow-hidden">
           <div 
-            className="flex animate-flow"
+            className="flex infinite-flow"
             style={{
               width: `${ethosImages.length * 200}%`,
               gap: '20px'
@@ -137,8 +137,8 @@ export function Ethos() {
             transform: translateX(-50%);
           }
         }
-        .animate-flow {
-          animation: flow 50s linear infinite;
+        .infinite-flow {
+          animation: flow 60s linear infinite;
           animation-fill-mode: none;
         }
       `}</style>
