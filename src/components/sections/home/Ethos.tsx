@@ -1,40 +1,53 @@
 'use client'
 
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
 
 const ethosImages = [
   {
-    src: "/assets/images/Home/Ethos/p-1.png",
-    alt: "The Enzari Ethos - Adaptive and Creative"
+    src: "/assets/images/Home/Ethos/Frame1.png",
+    alt: "The Enzari Ethos - Frame 1",
+    width: "281px",
+    height: "486px"
   },
   {
-    src: "/assets/images/Home/Ethos/p-2.png",
-    alt: "The Enzari Ethos - Creative Partners"
+    src: "/assets/images/Home/Ethos/Frame2.png",
+    alt: "The Enzari Ethos - Frame 2",
+    width: "440px",
+    height: "386px"
   },
   {
-    src: "/assets/images/Home/Ethos/p-3.png",
-    alt: "The Enzari Ethos - Storytellers"
+    src: "/assets/images/Home/Ethos/Frame3.png",
+    alt: "The Enzari Ethos - Frame 3",
+    width: "440px",
+    height: "449px"    
   },
   {
-    src: "/assets/images/Home/Ethos/p-4.png",
-    alt: "The Enzari Ethos - Invested Partners"
+    src: "/assets/images/Home/Ethos/Frame4.png",
+    alt: "The Enzari Ethos - Frame 4",
+    width: "292px",
+    height: "486px"    
+  },
+  {
+    src: "/assets/images/Home/Ethos/Frame5.png",
+    alt: "The Enzari Ethos - Frame 5",
+    width: "343px",
+    height: "486px"    
+  },
+  {
+    src: "/assets/images/Home/Ethos/Frame6.png",
+    alt: "The Enzari Ethos - Frame 6",
+    width: "440px",
+    height: "449px"    
+  },
+  {
+    src: "/assets/images/Home/Ethos/Frame7.png",
+    alt: "The Enzari Ethos - Frame 7",
+    width: "350px",
+    height: "486px"
   }
 ]
 
 export function Ethos() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
-        prevIndex === ethosImages.length - 1 ? 0 : prevIndex + 1
-      )
-    }, 3000) // Change image every 3 seconds
-
-    return () => clearInterval(interval)
-  }, [])
-
   return (
     <section className="pt-[80px] pb-[80px]" style={{ backgroundColor: '#F4F4F4' }}>
       <div className="flex flex-col items-center">
@@ -70,48 +83,65 @@ export function Ethos() {
           </p>
         </div>
 
-        {/* Animated Image Carousel */}
+        {/* Continuous Flowing Animation */}
         <div className="relative w-full h-[486px] overflow-hidden">
           <div 
-            className="flex transition-transform duration-1000 ease-in-out"
+            className="flex animate-flow"
             style={{
-              transform: `translateX(-${currentImageIndex * 100}%)`,
-              width: `${ethosImages.length * 100}%`
+              width: `${ethosImages.length * 200}%`,
+              gap: '20px'
             }}
           >
+            {/* First set of images */}
             {ethosImages.map((image, index) => (
               <div
-                key={index}
-                className="w-full h-full flex-shrink-0"
-                style={{ width: `${100 / ethosImages.length}%` }}
+                key={`first-${index}`}
+                className="flex-shrink-0"
+                style={{ width: image.width, height: image.height }}
               >
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  width={1440}
-                  height={486}
+                  width={parseInt(image.width)}
+                  height={parseInt(image.height)}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {ethosImages.map((image, index) => (
+              <div
+                key={`second-${index}`}
+                className="flex-shrink-0"
+                style={{ width: image.width, height: image.height }}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={parseInt(image.width)}
+                  height={parseInt(image.height)}
                   className="w-full h-full object-cover"
                 />
               </div>
             ))}
           </div>
         </div>
-
-        {/* Dots Indicator */}
-        <div className="flex space-x-3 mt-8">
-          {ethosImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentImageIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentImageIndex 
-                  ? 'bg-black scale-125' 
-                  : 'bg-gray-400 hover:bg-gray-600'
-              }`}
-            />
-          ))}
-        </div>
       </div>
+
+      <style jsx>{`
+        @keyframes flow {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .animate-flow {
+          animation: flow 50s linear infinite;
+          animation-fill-mode: none;
+        }
+      `}</style>
     </section>
   )
 } 
