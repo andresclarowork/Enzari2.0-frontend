@@ -7,7 +7,7 @@ export function About() {
     <section className="bg-white, max-w-[1440px] mx-auto" style={{ paddingTop: '80.45px' }}>
       <div style={{ paddingLeft: '100px', paddingRight: '100px' }}>
           {/* Intro Video Section */}
-          <div className="relative overflow-hidden shadow-2xl" style={{ borderRadius: '32px' }}>
+          <div className="relative overflow-hidden shadow-2xl max-w-[1240px] mx-auto max-h-[700px]" style={{ borderRadius: '32px' }}>
             <video
               src="/assets/images/Home/intro-background-video.mp4"
               autoPlay
