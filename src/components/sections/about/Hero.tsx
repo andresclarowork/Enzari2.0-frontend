@@ -36,7 +36,7 @@ export function Hero() {
               paddingBottom: '25px'
             }}
           >
-            We're not just a design agency. We're the product-thinking team behind 100M+ users, $2B+ funding, & 250+ VC-backend success stories.
+            We're not just a design agency. We're the product-thinking team behind 100M+ users, $2B+ funding, & 250+ VC-backed success stories.
           </p>
         </div>
         <div className="flex flex-row rounded-[32px] overflow-hidden">

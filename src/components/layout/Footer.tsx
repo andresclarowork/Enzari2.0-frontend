@@ -30,7 +30,7 @@ export function Footer() {
           <div className="flex flex-row" style={{justifyContent:'space-between'}}>
             {/* Left Column - Branding */}
             <div className="flex flex-col" style={{gap:'40px'}}>
-              <Link href="/" className="flex items-center">
+              <Link href="/" className="flex items-center transition-all duration-300 hover:scale-105 hover:opacity-80">
                 <Image
                   src="/assets/images/Logo.png"
                   alt="Enzari Creations Logo"
@@ -86,7 +86,7 @@ export function Footer() {
                     <li key={link.name}>
                       <Link
                         href={link.href}
-                        className="hover:text-gray-600 transition-colors duration-200"
+                        className="transition-all duration-300 hover:translate-x-2 hover:text-[#FE0B5F] group"
                         style={{
                           fontFamily: 'var(--font-inter-tight)',
                           fontWeight: 400,
@@ -97,7 +97,10 @@ export function Footer() {
                           color: '#111111'
                         }}
                       >
-                        {link.name}
+                        <span className="relative">
+                          {link.name}
+                          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FE0B5F] transition-all duration-300 group-hover:w-full"></span>
+                        </span>
                       </Link>
                     </li>
                   ))}
@@ -120,7 +123,10 @@ export function Footer() {
                   >
                     CALL US
                   </h3>
-                  <p style={{
+                  <a 
+                    href="tel:+16094510357"
+                    className="transition-all duration-300 hover:text-[#FE0B5F] hover:scale-105 inline-block"
+                    style={{
                       fontFamily: 'var(--font-inter-tight)',
                       fontWeight: 400,
                       fontStyle: 'regular',
@@ -128,7 +134,10 @@ export function Footer() {
                       lineHeight: '25px',
                       letterSpacing: '-0.03em',
                       color: '#111111'
-                    }}>+1 (609) 451-0357</p>
+                    }}
+                  >
+                    +1 (609) 451-0357
+                  </a>
                 </div>
                 
                 <div className="mb-6">
@@ -142,7 +151,10 @@ export function Footer() {
                       letterSpacing: '0px',
                       color: '#252A33'
                     }}>EMAIL US</h3>
-                  <p style={{
+                  <a 
+                    href="mailto:STUDIO@ENZARI.CO"
+                    className="transition-all duration-300 hover:text-[#FE0B5F] hover:scale-105 inline-block"
+                    style={{
                       fontFamily: 'var(--font-inter-tight)',
                       fontWeight: 400,
                       fontStyle: 'regular',
@@ -150,7 +162,10 @@ export function Footer() {
                       lineHeight: '25px',
                       letterSpacing: '-0.03em',
                       color: '#111111'
-                    }}>STUDIO@ENZARI.CO</p>
+                    }}
+                  >
+                    STUDIO@ENZARI.CO
+                  </a>
                 </div>
                 
                 <div>
@@ -192,11 +207,11 @@ export function Footer() {
               <Link 
                 key={social.name}
                 href={social.href}
-                className="flex flex-row items-start max-w-[210px] pb-[11px]"
+                className="flex flex-row items-start max-w-[210px] pb-[11px] group transition-all duration-300 hover:translate-y-[-2px] hover:scale-105"
                 style={{ borderBottom: '1px solid #999999' }}
               >
                 <span 
-                  className="uppercase mr-12"
+                  className="uppercase mr-12 transition-all duration-300 group-hover:text-[#FE0B5F]"
                   style={{
                     fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 400,
@@ -209,7 +224,7 @@ export function Footer() {
                 >
                   {social.name}
                 </span>
-                <ArrowUpRight className="h-6 w-6" />
+                <ArrowUpRight className="h-6 w-6 transition-all duration-300 group-hover:text-[#FE0B5F] group-hover:rotate-45" />
               </Link>
             ))}
             
@@ -236,7 +251,7 @@ export function Footer() {
               <div className="flex flex-row gap-[40px]">
                 <Link 
                   href="/terms" 
-                  className="hover:text-gray-700"
+                  className="transition-all duration-300 hover:text-[#FE0B5F] hover:underline hover:underline-offset-4"
                   style={{
                     fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 400,
@@ -251,7 +266,7 @@ export function Footer() {
                 </Link>
                 <Link 
                   href="/privacy" 
-                  className="hover:text-gray-700"
+                  className="transition-all duration-300 hover:text-[#FE0B5F] hover:underline hover:underline-offset-4"
                   style={{
                     fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 400,
