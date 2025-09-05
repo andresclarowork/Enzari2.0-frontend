@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
@@ -16,11 +16,52 @@ const navigation = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY
+      setIsScrolled(scrollTop > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <header className="bg-white sticky top-0 z-50">
-      <nav style={{ paddingTop: '30px', paddingLeft: '40px', paddingRight: '40px', paddingBottom: '10px' }}>
+    <header 
+      className="sticky z-999 transition-all duration-500 ease-out"
+      style={{
+        // top: isScrolled ? '20px' : '0px',
+        top: '20px',
+        backgroundColor: isScrolled ? 'transparent' : 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: isScrolled ? 'none' : 'blur(10px)',
+        WebkitBackdropFilter: isScrolled ? 'none' : 'blur(10px)',
+        boxShadow: isScrolled ? 'none' : 'none',
+        margin: isScrolled ? '0 30px' : '0',
+        zIndex: '999'
+      }}
+    >
+      <nav 
+        className="transition-all duration-500 ease-out"
+        style={{ 
+          paddingTop: '10px',
+          paddingBottom: '10px',
+          paddingLeft: isScrolled ? '30px' : '40px',
+          paddingRight: isScrolled ? '20px' : '40px',
+          maxWidth: isScrolled ? '1000px' : '100%',
+          margin: isScrolled ? '0 auto' : '0',
+          borderRadius: isScrolled ? '10px' : '0',
+          // border: isScrolled ? '1px solid rgba(0, 0, 0)' : 'none',
+          // backgroundColor: isScrolled ? 'rgba(38, 38, 38, 0.8)' : 'transparent',
+          backgroundColor: isScrolled ? 'rgba(255, 226, 237, 0.8)' : 'transparent',
+          backdropFilter: isScrolled ? 'blur(10px)' : 'none',
+          WebkitBackdropFilter: isScrolled ? 'blur(10px)' : 'none',
+          boxShadow: isScrolled ? 'rgba(255, 255, 255, 0.1) 0px 1px 1px 1px inset' : 'none',
+          zIndex: '999'
+        }}
+      >
         <div>
           <div className="flex justify-between items-center">
             {/* Logo */}
