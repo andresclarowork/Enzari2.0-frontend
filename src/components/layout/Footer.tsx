@@ -25,7 +25,7 @@ export function Footer() {
   return (
     <footer className="bg-white">
       
-        <div className="flex flex-col max-w-[1440px] mx-auto pl-[39px] pr-[39px] pt-[50px] pb-[50px]" style={{gap:'102px'}}>
+        <div className="flex flex-col mx-auto pl-[39px] pr-[39px] pt-[50px] pb-[50px]" style={{gap:'102px'}}>
           
           <div className="flex flex-row" style={{justifyContent:'space-between'}}>
             {/* Left Column - Branding */}
