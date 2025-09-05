@@ -68,7 +68,7 @@ export function Header() {
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
                 <Image
-                  src="/assets/images/Logo.png"
+                  src="/assets/images/Logo.svg"
                   alt="Enzari Creations Logo"
                   width={131}
                   height={32}

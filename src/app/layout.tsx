@@ -40,6 +40,21 @@ export const metadata: Metadata = {
   creator: 'Enzari Creations',
   publisher: 'Enzari Creations',
   robots: 'index, follow',
+  icons: {
+    icon: [
+      { url: '/assets/images/favicon.svg', sizes: 'any', type: 'image/svg+xml' },
+      { url: '/assets/images/favicon.svg', sizes: '16x16', type: 'image/svg+xml' },
+      { url: '/assets/images/favicon.svg', sizes: '32x32', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/assets/images/favicon.svg', sizes: '180x180', type: 'image/svg+xml' },
+    ],
+    other: [
+      { url: '/assets/images/favicon.svg', sizes: '192x192', type: 'image/svg+xml' },
+      { url: '/assets/images/favicon.svg', sizes: '512x512', type: 'image/svg+xml' },
+    ],
+  },
+  manifest: '/site.webmanifest',
   openGraph: {
     type: 'website',
     locale: 'en_US',
