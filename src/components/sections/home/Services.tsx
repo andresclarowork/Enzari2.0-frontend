@@ -9,38 +9,38 @@ const services = [
   { 
     name: 'Product Design', 
     isHighlighted: true,
-    leftImage: '/assets/images/Home/Services/Service1.png',
-    rightImage: '/assets/images/Home/Services/Service2.png'
+    leftImage: '/assets/images/Home/Services/1-L.png',
+    rightImage: '/assets/images/Home/Services/1-R.png'
   },
   { 
     name: 'Branding', 
     isHighlighted: false,
-    leftImage: '/assets/images/Home/Services/Service1.png',
-    rightImage: '/assets/images/Home/Services/Service2.png'
+    leftImage: '/assets/images/Home/Services/2-L.png',
+    rightImage: '/assets/images/Home/Services/2-R.png'
   },
   { 
     name: 'Graphic Designing', 
     isHighlighted: false,
-    leftImage: '/assets/images/Home/Services/Service1.png',
-    rightImage: '/assets/images/Home/Services/Service2.png'
+    leftImage: '/assets/images/Home/Services/3-L.png',
+    rightImage: '/assets/images/Home/Services/3-R.png'
   },
   { 
     name: 'AI Production', 
     isHighlighted: false,
-    leftImage: '/assets/images/Home/Services/Service1.png',
-    rightImage: '/assets/images/Home/Services/Service2.png'
+    leftImage: '/assets/images/Home/Services/4-L.png',
+    rightImage: '/assets/images/Home/Services/4-R.png'
   },
   { 
     name: 'Motion Design', 
     isHighlighted: false,
-    leftImage: '/assets/images/Home/Services/Service1.png',
-    rightImage: '/assets/images/Home/Services/Service2.png'
+    leftImage: '/assets/images/Home/Services/5-L.png',
+    rightImage: '/assets/images/Home/Services/5-R.png'
   },
   { 
     name: 'Web Design', 
     isHighlighted: false,
-    leftImage: '/assets/images/Home/Services/Service1.png',
-    rightImage: '/assets/images/Home/Services/Service2.png'
+    leftImage: '/assets/images/Home/Services/6-L.png',
+    rightImage: '/assets/images/Home/Services/6-R.png'
   },
 ]
 
@@ -56,10 +56,10 @@ export function Services() {
           <div className="flex flex-col items-start gap-5">
             <div className="w-[346px] h-[286px] relative overflow-hidden shadow-2xl transition-all duration-300" style={{ borderRadius: '24px', backgroundColor:'#F2EFEB' }}>
               <Image
-                src="/assets/images/Home/Services/Service1.png"
-                alt="Mobile App Interface 1"
+                src={services[hoveredService]?.leftImage || services[0].leftImage}
+                alt={`${services[hoveredService]?.name || services[0].name} - Left Image`}
                 fill
-                className="object-cover transition-all duration-300"
+                className="object-cover transition-all duration-500"
               />
             </div>
             <p 
@@ -115,7 +115,7 @@ export function Services() {
                   opacity: hoveredService === index ? '1' : '0.3'
                 }}
                 onMouseEnter={() => setHoveredService(index)}
-                onMouseLeave={() => setHoveredService(-1)} // Reset to no service on leave
+                onMouseLeave={() => setHoveredService(0)} // Reset to first service on leave
               >
                 {service.name}                
               </div>
@@ -190,10 +190,10 @@ export function Services() {
           <div className="flex flex-col items-start gap-5">
             <div className="w-[346px] h-[286px] relative overflow-hidden shadow-2xl transition-all duration-300" style={{ borderRadius: '24px', backgroundColor:'#F2EFEB' }}>
             <Image
-              src="/assets/images/Home/Services/Service2.png"
-              alt="Mobile App Interface 2"
+              src={services[hoveredService]?.rightImage || services[0].rightImage}
+              alt={`${services[hoveredService]?.name || services[0].name} - Right Image`}
               fill
-              className="object-cover transition-all duration-300"
+              className="object-cover transition-all duration-500"
             />
             </div>
             <p 
