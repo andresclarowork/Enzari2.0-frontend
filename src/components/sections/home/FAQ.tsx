@@ -38,10 +38,10 @@ export function FAQ() {
   }
 
   return (
-    <section className="flex flex-row items-center justify-between max-w-[1440px] mx-auto pt-[120px] pb-[120px] pl-[100px] pr-[100px] bg-white">
+    <section className="flex flex-col lg:flex-row items-start lg:items-center justify-between max-w-[1440px] mx-auto pt-8 sm:pt-12 md:pt-16 lg:pt-[120px] pb-8 sm:pb-12 md:pb-16 lg:pb-[120px] pl-4 sm:pl-6 md:pl-8 lg:pl-[100px] pr-4 sm:pr-6 md:pr-8 lg:pr-[100px] bg-white">
       
       <div 
-        className="flex flex-row"
+        className="flex flex-col lg:flex-row gap-8 lg:gap-0"
         style={{
           width: '100%',
           minHeight: '411px',
@@ -49,14 +49,15 @@ export function FAQ() {
         }}
       >
         {/* Left Side - Title */}
-        <div className="flex flex-col max-w-[448px]">
+        <div className="flex flex-col w-full lg:max-w-[448px]">
           <h2 
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[80px]"
             style={{
               fontFamily: 'var(--font-inter-tight)',
               fontWeight: 400,
               fontStyle: 'regular',
-              fontSize: '80px',
-              lineHeight: '82px',
+              // fontSize: '80px',
+              // lineHeight: '82px',
               letterSpacing: '0.05em',
               verticalAlign: 'middle',
               color: '#000000'
@@ -70,17 +71,17 @@ export function FAQ() {
         
         {/* Right Side - FAQ Items */}
         <div 
-          className="flex flex-col gap-4" 
+          className="flex flex-col gap-3 sm:gap-4 w-full lg:max-w-[743px] lg:w-[743px]" 
           style={{             
-            maxWidth: '743px',
-            width: '743px',
+            // maxWidth: '743px',
+            // width: '743px',
             paddingTop: '4px'
           }}
         >
           {faqs.map((faq) => (
             <div 
               key={faq.id} 
-              className="overflow-hidden"
+              className="overflow-hidden p-5 sm:p-6 md:p-6"
               style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -100,6 +101,7 @@ export function FAQ() {
                 style={{ width: '100%' }}
               >
                 <span 
+                  className="text-lg sm:text-xl md:text-[22px]"
                   style={{
                     fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 500,
@@ -114,15 +116,16 @@ export function FAQ() {
                   {faq.question}
                 </span>
                 {openFaq === faq.id ? (
-                  <Minus className="h-5 w-5 text-gray-900 flex-shrink-0" />
+                  <Minus className="h-4 w-4 sm:h-5 sm:w-5 text-gray-900 flex-shrink-0" />
                 ) : (
-                  <Plus className="h-5 w-5 text-gray-900 flex-shrink-0" />
+                  <Plus className="h-4 w-4 sm:h-5 sm:w-5 text-gray-900 flex-shrink-0" />
                 )}
               </button>
               
               {openFaq === faq.id && (
                 <div style={{ width: '100%' }}>
                   <p 
+                    className="text-sm sm:text-base"
                     style={{
                       fontFamily: 'var(--font-inter-tight)',
                       fontWeight: 400,

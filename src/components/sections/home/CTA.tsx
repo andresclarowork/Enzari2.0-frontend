@@ -16,16 +16,17 @@ export function CTA() {
         />
       </div>
       
-      <div className="flex flex-col relative z-10 pt-[103px] pb-[103px] gap-[40px] mx-auto">
+      <div className="flex flex-col relative z-10 pt-8 sm:pt-12 md:pt-16 lg:pt-[103px] pb-8 sm:pb-12 md:pb-16 lg:pb-[103px] gap-6 sm:gap-8 md:gap-10 lg:gap-[40px] mx-auto px-4 sm:px-6 md:px-8 lg:px-0">
         
         <div className="flex flex-col text-center">
           <h2 
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[100px]"
             style={{
               fontFamily: 'var(--font-inter-tight)',
               fontWeight: 400,
               fontStyle: 'regular',
-              fontSize: '100px',
-              lineHeight: '100px',
+              // fontSize: '100px',
+              // lineHeight: '100px',
               letterSpacing: '-0.05em',
               textAlign: 'center',
               verticalAlign: 'middle',
@@ -37,14 +38,15 @@ export function CTA() {
           </h2>
         </div>
 
-        <div className="flex flex-col text-center max-w-[541px] mx-auto gap-5">
+        <div className="flex flex-col text-center max-w-[541px] mx-auto gap-4 sm:gap-5">
           <p 
+            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[20px]"
             style={{
               fontFamily: 'var(--font-inter-tight)',
               fontWeight: 400,
               fontStyle: 'regular',
-              fontSize: '20px',
-              lineHeight: '24px',
+              // fontSize: '20px',
+              // lineHeight: '24px',
               letterSpacing: '-0.05em',
               textAlign: 'center',
               color: '#E4E4E4'
@@ -56,16 +58,17 @@ export function CTA() {
           <div className="flex justify-center" style={{gap:'10px'}}>
             <Link
               href="/contact"
-              className="inline-flex items-center transition-colors duration-200 group shadow-lg"
+              className="inline-flex items-center transition-colors duration-200 group shadow-lg px-4 py-3 sm:px-5 sm:py-3.5 md:px-6 md:py-4 lg:px-[22px] lg:py-[14px]"
               style={{
                 borderRadius: '12px',
-                padding: '14px 22px',
+                // padding: '14px 22px',
                 gap: '10px',
                 color: '#FFFFFF',
                 backgroundColor: '#FFFFFF'              
               }}
             >
               <span 
+                className="text-sm sm:text-base"
                 style={{
                   fontFamily: 'var(--font-saans-trial)',
                   fontWeight: 500,
@@ -79,7 +82,7 @@ export function CTA() {
                 Contact Us
               </span>
               <ArrowUpRight 
-                className="text-black group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200"
+                className="text-black group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200 h-3 w-3 sm:h-4 sm:w-4"
                 style={{ 
                   width: '10.94px', 
                   height: '11px',                  
