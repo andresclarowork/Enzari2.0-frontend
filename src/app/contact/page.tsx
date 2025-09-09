@@ -1,19 +1,18 @@
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
-import { PageHeader } from '@/components/layout/PageHeader'
-
+import { FAQ } from '@/components/sections/home/FAQ'
+import { Title } from '@/components/sections/contact/Title'
+import { Form } from '@/components/sections/contact/Form'
+import { Intro } from '@/components/sections/contact/Intro'
 
 export default function ContactPage() {
   return (
     <main className="min-h-screen">
-      <Header />
-      <PageHeader 
-        title="Contact Us"
-        subtitle="Get in touch with our team to discuss your next project"
-      />
-      
-      
-      
+      <Header />      
+      <Title />
+      <Form />
+      <Intro />
+      <FAQ />
       <Footer />
     </main>
   )

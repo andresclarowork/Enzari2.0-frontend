@@ -3,9 +3,9 @@ import { ArrowUpRight } from 'lucide-react'
 
 export function CTA() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden rounded-[32px]">
       {/* Background Video */}
-      <div className="absolute inset-0" style={{borderRadius:'32px', backgroundColor:'#11111180'}}>
+      <div className="absolute inset-0  rounded-[32px]" style={{backgroundColor:'#11111180'}}>
         <video
           src="/assets/images/Home/CTA-background.mp4"
           autoPlay
