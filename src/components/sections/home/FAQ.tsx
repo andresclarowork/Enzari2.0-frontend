@@ -38,7 +38,7 @@ export function FAQ() {
   }
 
   return (
-    <section className="flex flex-col lg:flex-row items-start lg:items-center justify-between max-w-[1440px] mx-auto pt-8 sm:pt-12 md:pt-16 lg:pt-[120px] pb-8 sm:pb-12 md:pb-16 lg:pb-[120px] pl-4 sm:pl-6 md:pl-8 lg:pl-[100px] pr-4 sm:pr-6 md:pr-8 lg:pr-[100px] bg-white">
+    <section className="flex flex-col lg:flex-row items-start lg:items-center justify-between max-w-[1440px] mx-auto pt-8 sm:pt-12 md:pt-16 lg:pt-[120px] pl-4 sm:pl-6 md:pl-8 lg:pl-[100px] pr-4 sm:pr-6 md:pr-8 lg:pr-[100px] bg-white">
       
       <div 
         className="flex flex-col lg:flex-row gap-8 lg:gap-0"

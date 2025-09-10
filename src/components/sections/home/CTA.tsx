@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react'
 
 export function CTA() {
   return (
-    <section className="relative overflow-hidden rounded-[32px]">
+    <section className="relative overflow-hidden rounded-[32px] mt-8 sm:mt-12 md:mt-16 lg:mt-[120px] ">
       {/* Background Video */}
       <div className="absolute inset-0  rounded-[32px]" style={{backgroundColor:'#11111180'}}>
         <video
