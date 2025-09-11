@@ -1,16 +1,14 @@
 export function Title() {
     return (
-      <section className="flex flex-col items-center justify-center max-w-[1440px] mx-auto pt-[50px] pl-[100px] pr-[100px] gap-20">
-        <div className="flex flex-col items-center justify-center gap-[30px] max-w-[584px]">
+      <section className="flex flex-col items-center justify-center max-w-[1440px] mx-auto pt-8 sm:pt-12 md:pt-16 lg:pt-[50px] px-4 sm:px-6 md:px-8 lg:pl-[100px] lg:pr-[100px] gap-8 sm:gap-12 md:gap-16 lg:gap-20">
+        <div className="flex flex-col items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-[30px] max-w-full lg:max-w-[584px]">
             <p 
+               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[80px] leading-tight sm:leading-tight md:leading-tight lg:leading-[86px] text-center"
                style={{
                  fontFamily: 'var(--font-inter-tight)',
                  fontWeight: 400,
                  fontStyle: 'regular',
-                 fontSize: '80px',
-                 lineHeight: '86px',
                  letterSpacing: '-0.03em',
-                 textAlign: 'center',
                  verticalAlign: 'middle',
                  color: '#000000'
                }}
@@ -18,18 +16,15 @@ export function Title() {
                Have a Project? Let's Talk
             </p>
             <p 
+              className="text-sm sm:text-base lg:text-[18px] leading-relaxed sm:leading-relaxed lg:leading-[25px] text-center pb-4 sm:pb-5 md:pb-6 lg:pb-[25px]"
               style={{
                 fontFamily: 'var(--font-inter-tight)',
                 fontWeight: 400,
                 fontStyle: 'regular',
-                fontSize: '18px',
-                lineHeight: '25px',
                 letterSpacing: '0px',
-                textAlign: 'center',
                 verticalAlign: 'middle',
                 color: '#000000',
-                borderBottom: '1px solid #D2D2D2',
-                paddingBottom: '25px'
+                borderBottom: '1px solid #D2D2D2'
               }}
             >
               We'd love to hear about your ideas. Share your vision with us, and together we'll craft solutions that bring it to life.

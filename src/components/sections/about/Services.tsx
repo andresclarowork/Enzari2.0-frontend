@@ -30,8 +30,84 @@ export function Services() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
-    <section className="flex flex-col pt-[88px] pl-[40px] pr-[40px] max-w-[1440px] mx-auto">
-      <div className="flex flex-col">
+    <section className="flex flex-col pt-8 sm:pt-12 md:pt-16 lg:pt-[88px] px-4 sm:px-6 md:px-8 lg:pl-[40px] lg:pr-[40px] max-w-[1440px] mx-auto">
+      {/* Mobile: Same dropdown effect as desktop */}
+      <div className="lg:hidden">
+        <div className="flex flex-col">
+          {services.map((service, index) => (
+            <div 
+              key={index}
+              className="flex flex-col bg-white border-b border-[#E5E5E5] cursor-pointer transition-all duration-300"
+              style={{
+                paddingTop: '24px',
+                paddingBottom: '24px',
+                backgroundColor: '#FFFFFF',
+                borderBottom: '1px solid #E5E5E5'
+              }}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-6">
+                  <span 
+                    className="text-3xl"
+                    style={{
+                      fontFamily: 'var(--font-inter-tight)',
+                      fontWeight: 400,                 
+                      fontStyle: 'regular',
+                      lineHeight: '1em',
+                      letterSpacing: '-0.05em',
+                      verticalAlign: 'center',
+                      color: hoveredIndex === index ? '#000000' : '#9B9B9B'
+                    }}
+                  >
+                    {service.number}
+                  </span>
+                  <div className="flex flex-col max-w-[280px]">
+                      <h3 
+                      className="text-2xl"
+                      style={{
+                          fontFamily: 'var(--font-inter-tight)',
+                          fontWeight: 400,
+                          fontStyle: 'regular',
+                          lineHeight: '1em',
+                          letterSpacing: '-0.05em',
+                          verticalAlign: 'center',
+                          color: hoveredIndex === index ? '#000000' : '#9B9B9B'
+                      }}
+                      >
+                      {service.title}
+                      </h3>
+                      {/* Description - shown on hover/touch like desktop */}
+                      {hoveredIndex === index && (
+                      <div className="mt-4 animate-in slide-in-from-top-2 duration-300">
+                          <p 
+                          className="text-sm leading-relaxed"
+                          style={{
+                              fontFamily: 'var(--font-inter-tight)',
+                              fontWeight: 400,
+                              color: '#000000'
+                          }}
+                          >
+                          {service.description}
+                          </p>
+                      </div>
+                      )}
+                  </div>
+                </div>
+                
+                <ArrowRight 
+                  className="w-8 h-8 transition-colors duration-300"
+                  style={{ color: hoveredIndex === index ? '#000000' : '#9B9B9B' }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop: Original layout */}
+      <div className="hidden lg:flex flex-col">
         {services.map((service, index) => (
           <div 
             key={index}

@@ -129,12 +129,13 @@ export function Team() {
                           }}
                         >
                           <div className="relative w-full h-full">
-                            <Image
-                              src={member.image}
-                              alt={member.name}
-                              fill
-                              className="object-cover transition-transform duration-300 group-hover:scale-110"
-                            />
+                             <Image
+                               src={member.image}
+                               alt={member.name}
+                               fill
+                               className="object-cover transition-transform duration-300 group-hover:scale-110"
+                               unoptimized
+                             />
                             
                             {/* Gradient Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -215,12 +216,13 @@ export function Team() {
                           }}
                         >
                           <div className="relative w-full h-full">
-                            <Image
-                              src={member.image}
-                              alt={member.name}
-                              fill
-                              className="object-cover"
-                            />
+                             <Image
+                               src={member.image}
+                               alt={member.name}
+                               fill
+                               className="object-cover"
+                               unoptimized
+                             />
                             
                             {/* Desktop Hover Overlay */}
                             <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
