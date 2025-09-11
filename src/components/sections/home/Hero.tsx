@@ -299,84 +299,86 @@ export function Hero() {
 
           {/* Get In Touch Button - Fixed Position */}
           <div className="fixed bottom-4 sm:bottom-6 lg:bottom-8 left-1/2 transform -translate-x-1/2 z-50 px-4 sm:px-6 lg:px-0">
-            {/* Outer gray container */}
-            <div 
-              className="flex items-center justify-between relative overflow-hidden"
-              style={{ 
-                background: '#0000001A',
-                borderRadius: '21.13px',
-                width: '255px',
-                backdropFilter: 'blur(31.69px)',
-                WebkitBackdropFilter: 'blur(31.69px)'
-              }}
-            >
-              {/* Inner white button */}
+            <Link href="/contact" className="block transition-all duration-300 hover:scale-105">
+              {/* Outer gray container */}
               <div 
-                className="flex items-center justify-between"
-                style={{
-                  background: '#F8FAFC',
-                  border: '1.32px solid #CAD5E2',
-                  borderRadius: '10.56px',
-                  width: '199px',
-                  height: '45px',
-                  margin: '13px 13px 13px 13px',
-                  padding: '13px 16px 13px 16px'
+                className="flex items-center justify-between relative overflow-hidden"
+                style={{ 
+                  background: '#0000001A',
+                  borderRadius: '21.13px',
+                  width: '255px',
+                  backdropFilter: 'blur(31.69px)',
+                  WebkitBackdropFilter: 'blur(31.69px)'
                 }}
               >
-                <span 
-                  className="text-xs sm:text-sm lg:text-[16px] leading-tight text-center"
-                  style={{
-                    fontFamily: 'var(--font-inter)',
-                    fontWeight: 500,
-                    fontStyle: 'medium',
-                    letterSpacing: '-5%',
-                    color: '#000000'
-                  }}
-                >
-                  Get In Touch With Us
-                </span>
-                
+                {/* Inner white button */}
                 <div 
-                  className="rounded-full flex items-center justify-center relative"
+                  className="flex items-center justify-between"
                   style={{
-                    background: 'linear-gradient(135deg, #FE0B5F 0%, #FF5993 100%)',
-                    width: '46.22px',
-                    height: '46.22px',
-                    position: 'absolute',
-                    // top: '7.85px',
-                    left: '193.54px',
-                    zIndex: 10
+                    background: '#F8FAFC',
+                    border: '1.32px solid #CAD5E2',
+                    borderRadius: '10.56px',
+                    width: '199px',
+                    height: '45px',
+                    margin: '13px 13px 13px 13px',
+                    padding: '13px 16px 13px 16px'
                   }}
                 >
-                  {/* Animated outer circle - pulsing effect */}
-                  <div 
-                    className="absolute rounded-full"
+                  <span 
+                    className="text-xs sm:text-sm lg:text-[16px] leading-tight text-center"
                     style={{
-                      width: '59.42px',
-                      height: '59.42px',
-                      background: '#FE0B5F4D',
-                      animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                      zIndex: -1
+                      fontFamily: 'var(--font-inter)',
+                      fontWeight: 500,
+                      fontStyle: 'medium',
+                      letterSpacing: '-5%',
+                      color: '#000000'
                     }}
-                  />
-                  
-                  {/* Inner circle with checkmark */}
-                  <svg 
-                    className="w-5 h-5 text-white relative z-10" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
                   >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2.5} 
-                      d="M5 13l4 4L19 7" 
+                    Get In Touch With Us
+                  </span>
+                  
+                  <div 
+                    className="rounded-full flex items-center justify-center relative"
+                    style={{
+                      background: 'linear-gradient(135deg, #FE0B5F 0%, #FF5993 100%)',
+                      width: '46.22px',
+                      height: '46.22px',
+                      position: 'absolute',
+                      // top: '7.85px',
+                      left: '193.54px',
+                      zIndex: 10
+                    }}
+                  >
+                    {/* Animated outer circle - pulsing effect */}
+                    <div 
+                      className="absolute rounded-full"
+                      style={{
+                        width: '59.42px',
+                        height: '59.42px',
+                        background: '#FE0B5F4D',
+                        animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        zIndex: -1
+                      }}
                     />
-                  </svg>
+                    
+                    {/* Inner circle with checkmark */}
+                    <svg 
+                      className="w-5 h-5 text-white relative z-10" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2.5} 
+                        d="M5 13l4 4L19 7" 
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
 

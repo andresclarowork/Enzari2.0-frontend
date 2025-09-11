@@ -383,7 +383,7 @@ export function Footer() {
             </div>
 
             {/* Desktop Social Links */}
-            <div className="hidden lg:flex flex-row">            
+            <div className="hidden lg:flex flex-row lg:justify-between lg:items-center lg:w-[100%]">            
               {socialLinks.map((social) => (
                 <Link 
                   key={social.name}
@@ -414,9 +414,9 @@ export function Footer() {
           
 
           {/* Bottom Section - Copyright & Legal */}
-          <div className="flex flex-col lg:flex-row gap-4 lg:gap-0" style={{justifyContent:'space-between'}}>
+          <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 lg:w-[100%]" style={{justifyContent:'space-between'}}>
             {/* Mobile Bottom Section */}
-            <div className="lg:hidden text-center space-y-4">
+            <div className="flex lg:hidden text-center space-y-4">
               <p 
                 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-[14px]"
                 style={{
@@ -460,7 +460,7 @@ export function Footer() {
             </div>
 
             {/* Desktop Bottom Section */}
-            <div className="hidden lg:flex flex-row" style={{justifyContent:'space-between'}}>
+            <div className="hidden lg:flex lg:flex-row lg:justify-between lg:items-center lg:w-[100%]">
               <p 
                 style={{
                   fontFamily: 'var(--font-inter-tight)',
@@ -472,7 +472,7 @@ export function Footer() {
                   color: '#111111'
                 }}
               >
-                2025, All Rights Reserved
+                ©2025, All Rights Reserved
               </p>
               <div className="flex flex-row gap-[40px]">
                 <Link 

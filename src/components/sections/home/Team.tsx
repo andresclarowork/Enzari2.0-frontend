@@ -1,36 +1,71 @@
 'use client'
 import { useState } from 'react'
 import Image from 'next/image'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const teamMembers = [
   {
     id: 1,
-    name: "Johnatan Kimbrough",
-    role: "Sales Development Manager",
-    image: "/assets/images/Home/Team/team1.png"
+    name: "Aaron",
+    role: "CMO, Founder",
+    image: "/assets/images/Home/Team/Aaron.jpg"
   },
   {
     id: 2,
-    name: "Gabriel Bohorquez", 
-    role: "Talent Acquisition Manager",
-    image: "/assets/images/Home/Team/team2.png"
+    name: "Johnathan",
+    role: "Sales Development Manager",
+    image: "/assets/images/Home/Team/Johnathan.png"
   },
   {
     id: 3,
-    name: "Dilshod Alimatov",
-    role: "Head of Design", 
-    image: "/assets/images/Home/Team/team3.png"
+    name: "Gabriel", 
+    role: "Talent Acquisition Manager",
+    image: "/assets/images/Home/Team/Gabriel.png"
   },
   {
     id: 4,
-    name: "Shery Butt",
+    name: "Dilshod",
+    role: "Head of Design", 
+    image: "/assets/images/Home/Team/Dilshod.png"
+  },
+  {
+    id: 5,
+    name: "Shery",
     role: "UI/UX Designer",
-    image: "/assets/images/Home/Team/team4.png"
+    image: "/assets/images/Home/Team/Shery.jpg"
+  },    
+  {
+    id: 6,
+    name: "Mariana",
+    role: "English Teacher,Marketing Specialist",
+    image: "/assets/images/Home/Team/Mariana.png"
+  },
+  {
+    id: 7,
+    name: "Andres",
+    role: "Full Stack Developer",
+    image: "/assets/images/Home/Team/Andres.png"
   }
 ]
 
 export function Team() {
   const [currentIndex, setCurrentIndex] = useState(0)
+  
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === teamMembers.length - 1 ? 0 : prevIndex + 1
+    )
+  }
+  
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? teamMembers.length - 1 : prevIndex - 1
+    )
+  }
+  
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index)
+  }
 
   return (
     <section className="pt-8 sm:pt-12 md:pt-16 lg:pt-[148px] pb-8 sm:pb-12 md:pb-16 lg:pb-[120px] pl-4 sm:pl-6 md:pl-8 lg:pl-[100px] bg-white">
@@ -56,124 +91,170 @@ export function Team() {
           </div>
           
           {/* Team Members Carousel */}
-          <div>
-            {/* Mobile Layout - Engaging horizontal scroll with cards */}
+          <div className="relative">
+            {/* Mobile Layout - Carousel with navigation */}
             <div className="lg:hidden">
-              <div className="flex overflow-x-auto gap-4 pb-4" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-                {teamMembers.map((member, index) => (
-                  <div key={member.id} className="flex-shrink-0">
-                    {/* Mobile Avatar Card - More engaging design */}
-                    <div 
-                      className="rounded-3xl overflow-hidden shadow-2xl group cursor-pointer transform transition-all duration-300 hover:scale-105 active:scale-95" 
-                      style={{ 
-                        backgroundColor: '#FE0B5F',
-                        width: '240px',
-                        height: '300px',
-                        borderRadius: '24px',
-                        boxShadow: '0 20px 40px rgba(254, 11, 95, 0.3)'
-                      }}
-                    >
-                      <div className="relative w-full h-full">
-                        <Image
-                          src={member.image}
-                          alt={member.name}
-                          fill
-                          className="object-cover transition-transform duration-300 group-hover:scale-110"
-                        />
-                        
-                        {/* Gradient Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                        
-                        {/* Mobile Info - Enhanced design */}
-                        <div className="absolute bottom-0 left-0 right-0 p-4">
-                          <div className="text-white">
-                            <h3 className="text-lg font-bold mb-1 drop-shadow-lg">
-                              {member.name}
-                            </h3>
-                            <p className="text-sm opacity-90 drop-shadow-md">
-                              {member.role}
-                            </p>
-                          </div>
-                          
-                          {/* Decorative element */}
-                          <div className="absolute top-0 right-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                            <div className="w-2 h-2 bg-white rounded-full"></div>
+              <div className="relative">
+                {/* Navigation Arrows */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-300 hover:scale-110"
+                >
+                  <ChevronLeft className="w-6 h-6 text-gray-700" />
+                </button>
+                
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-300 hover:scale-110"
+                >
+                  <ChevronRight className="w-6 h-6 text-gray-700" />
+                </button>
+                
+                {/* Carousel Container */}
+                <div className="overflow-hidden">
+                  <div 
+                    className="flex transition-transform duration-500 ease-in-out"
+                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                  >
+                    {teamMembers.map((member, index) => (
+                      <div key={member.id} className="w-full flex-shrink-0 px-4">
+                        <div 
+                          className="rounded-3xl overflow-hidden shadow-2xl group cursor-pointer transform transition-all duration-300 hover:scale-105 active:scale-95 mx-auto" 
+                          style={{ 
+                            backgroundColor: '#FE0B5F',
+                            width: '280px',
+                            height: '350px',
+                            borderRadius: '24px',
+                            boxShadow: '0 20px 40px rgba(254, 11, 95, 0.3)'
+                          }}
+                        >
+                          <div className="relative w-full h-full">
+                            <Image
+                              src={member.image}
+                              alt={member.name}
+                              fill
+                              className="object-cover transition-transform duration-300 group-hover:scale-110"
+                            />
+                            
+                            {/* Gradient Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            
+                            {/* Mobile Info - Enhanced design */}
+                            <div className="absolute bottom-0 left-0 right-0 p-6">
+                              <div className="text-white">
+                                <h3 className="text-xl font-bold mb-2 drop-shadow-lg">
+                                  {member.name}
+                                </h3>
+                                <p className="text-sm opacity-90 drop-shadow-md leading-relaxed">
+                                  {member.role}
+                                </p>
+                              </div>
+                              
+                              {/* Decorative element */}
+                              <div className="absolute top-0 right-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                                <div className="w-2 h-2 bg-white rounded-full"></div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
               
-              {/* Mobile Pagination - More engaging dots */}
-              <div className="flex justify-center mt-6 space-x-3">
+              {/* Mobile Pagination - Enhanced dots */}
+              <div className="flex justify-center mt-8 space-x-3">
                 {teamMembers.map((_, index) => (
                   <button
                     key={index}
-                    onClick={() => setCurrentIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    onClick={() => goToSlide(index)}
+                    className={`rounded-full transition-all duration-300 ${
                       index === currentIndex 
-                        ? 'bg-pink-500 w-8' 
-                        : 'bg-gray-300 hover:bg-gray-400'
+                        ? 'bg-pink-500 w-8 h-2' 
+                        : 'bg-gray-300 w-2 h-2 hover:bg-gray-400'
                     }`}
                   />
                 ))}
               </div>
             </div>
 
-            {/* Desktop Layout - Original horizontal layout */}
+            {/* Desktop Layout - Enhanced carousel */}
             <div className="hidden lg:block">
-              <div className="flex flex-row" style={{ gap:'20px'}}>
-                {teamMembers.map((member, index) => (
-                  <div key={member.id} className="flex-shrink-0">
-                    {/* Desktop Avatar Card */}
-                    <div 
-                      className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer" 
-                      style={{ 
-                        backgroundColor: '#FE0B5F',
-                        width: '367px',
-                        height: '460px',
-                        borderRadius: '24px'
-                      }}
-                    >
-                      <div className="relative w-full h-full">
-                        <Image
-                          src={member.image}
-                          alt={member.name}
-                          fill
-                          className="object-cover"
-                        />
-                        
-                        {/* Desktop Hover Overlay */}
-                        <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-                          <div className="text-white">
-                            <h3 className="text-xl font-bold mb-2">
-                              {member.name}
-                            </h3>
-                            <p className="text-sm opacity-90">
-                              {member.role}
-                            </p>
+              <div className="relative">
+                {/* Navigation Arrows */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 -ml-4"
+                >
+                  <ChevronLeft className="w-8 h-8 text-gray-700" />
+                </button>
+                
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 -mr-4"
+                >
+                  <ChevronRight className="w-8 h-8 text-gray-700" />
+                </button>
+                
+                {/* Carousel Container */}
+                <div className="overflow-hidden">
+                  <div 
+                    className="flex transition-transform duration-500 ease-in-out"
+                    style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+                  >
+                    {teamMembers.map((member, index) => (
+                      <div key={member.id} className="w-1/4 flex-shrink-0 px-3">
+                        <div 
+                          className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer transition-all duration-300 hover:scale-105" 
+                          style={{ 
+                            backgroundColor: '#FE0B5F',
+                            width: '100%',
+                            height: '460px',
+                            borderRadius: '24px'
+                          }}
+                        >
+                          <div className="relative w-full h-full">
+                            <Image
+                              src={member.image}
+                              alt={member.name}
+                              fill
+                              className="object-cover"
+                            />
+                            
+                            {/* Desktop Hover Overlay */}
+                            <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                              <div className="text-white">
+                                <h3 className="text-xl font-bold mb-2">
+                                  {member.name}
+                                </h3>
+                                <p className="text-sm opacity-90 leading-relaxed">
+                                  {member.role}
+                                </p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    ))}
                   </div>
+                </div>
+              </div>
+              
+              {/* Desktop Pagination - Enhanced dots */}
+              <div className="flex justify-center mt-8 space-x-3">
+                {teamMembers.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className={`rounded-full transition-all duration-300 ${
+                      index === currentIndex 
+                        ? 'bg-pink-500 w-8 h-3' 
+                        : 'bg-gray-300 w-3 h-3 hover:bg-gray-400'
+                    }`}
+                  />
                 ))}
               </div>
-            </div>
-            
-            {/* Pagination Dots - Hidden on mobile, shown on desktop */}
-            <div className="hidden lg:flex justify-center mt-[34px] space-x-2">
-              {[0, 1, 2, 3, 4].map((index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    index === currentIndex ? 'bg-pink-500' : 'bg-gray-300'
-                  }`}
-                />
-              ))}
             </div>
           </div>
         

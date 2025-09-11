@@ -91,7 +91,7 @@ export function Ethos() {
           <div 
             className="flex infinite-flow items-start"
             style={{
-              width: `${ethosImages.length * 200}%`,
+              width: 'max-content',
               gap: '20px',
               height: 'auto'
             }}
@@ -144,24 +144,25 @@ export function Ethos() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-30%);
+            transform: translateX(-50%);
           }
         }
         .infinite-flow {
-          animation: flow 30s linear infinite;
+          animation: flow 60s linear infinite;
           animation-fill-mode: none;
+          will-change: transform;
         }
         
         /* Mobile responsive adjustments */
         @media (max-width: 640px) {
           .infinite-flow {
-            animation: flow 20s linear infinite;
+            animation: flow 45s linear infinite;
           }
         }
         
         @media (min-width: 641px) and (max-width: 1023px) {
           .infinite-flow {
-            animation: flow 25s linear infinite;
+            animation: flow 50s linear infinite;
           }
         }
       `}</style>

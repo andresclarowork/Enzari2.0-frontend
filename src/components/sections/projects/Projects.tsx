@@ -95,7 +95,7 @@ export function Projects() {
                 style={{
                   padding: '14px 22px',
                   gap: '10px',
-                  fontFamily: 'Saans TRIAL',
+                  fontFamily: 'var(--font-saans-trial)',
                   fontWeight: 500,
                   fontSize: '16px',
                   lineHeight: '120%',
