@@ -87,17 +87,14 @@ export function Projects() {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`rounded-full transition-all duration-300 ${
+                className={`rounded-full transition-all duration-300 py-2 px-4 sm:py-3 sm:px-5 md:py-3 md:px-5 lg:py-[14px] lg:px-[22px] text-sm sm:text-sm md:text-base lg:text-[16px] ${
                   activeCategory === category
                     ? 'bg-[#FE0B5F] text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                 }`}
                 style={{
-                  padding: '10px 16px sm:py-3 sm:px-5 md:py-3 md:px-5 lg:py-[14px] lg:px-[22px]',
-                  gap: '10px',
                   fontFamily: 'var(--font-saans-trial)',
                   fontWeight: 500,
-                  fontSize: '14px sm:text-sm md:text-base lg:text-[16px]',
                   lineHeight: '120%',
                   letterSpacing: '-0.05em'
                 }}

@@ -31,31 +31,23 @@ export function Header() {
 
   return (
     <header 
-      className="sticky z-999 transition-all duration-500 ease-out"
+      className="sticky z-999 transition-all duration-500 ease-out top-0 lg:top-[20px]"
       style={{
-        // top: isScrolled ? '20px' : '0px',
-        top: '20px',
         backgroundColor: isScrolled ? 'transparent' : 'rgba(255, 255, 255, 0.7)',
         backdropFilter: isScrolled ? 'none' : 'blur(10px)',
         WebkitBackdropFilter: isScrolled ? 'none' : 'blur(10px)',
         boxShadow: isScrolled ? 'none' : 'none',
-        margin: isScrolled ? '0 30px' : '0',
+        margin: isScrolled ? '0 15px' : '0',
         zIndex: '999'
       }}
     >
       <nav 
-        className="transition-all duration-500 ease-out"
+        className="transition-all duration-500 ease-out pt-2 pb-2 lg:pt-[10px] lg:pb-[10px] pl-5 pr-5 lg:pl-[40px] lg:pr-[40px]"
         style={{ 
-          paddingTop: '10px',
-          paddingBottom: '10px',
-          paddingLeft: isScrolled ? '30px' : '40px',
-          paddingRight: isScrolled ? '20px' : '40px',
           maxWidth: isScrolled ? '1000px' : '100%',
           margin: isScrolled ? '0 auto' : '0',
-          borderRadius: isScrolled ? '10px' : '0',
-          // border: isScrolled ? '1px solid rgba(0, 0, 0)' : 'none',
+          borderRadius: isScrolled ? '8px' : '0',
           backgroundColor: isScrolled ? '#0000001A' : 'transparent',
-          // backgroundColor: isScrolled ? 'rgba(255, 226, 237, 0.8)' : 'transparent',
           backdropFilter: isScrolled ? 'blur(10px)' : 'none',
           WebkitBackdropFilter: isScrolled ? 'blur(10px)' : 'none',
           boxShadow: isScrolled ? 'rgba(255, 255, 255, 0.1) 0px 1px 1px 1px inset' : 'none',
@@ -73,7 +65,7 @@ export function Header() {
                   width={131}
                   height={32}
                   priority
-                  className="w-auto"
+                  className="w-auto h-6 sm:h-7 md:h-8 lg:h-8"
                   style={{ maxWidth: '131px', maxHeight: '32px' }}
                 />
               </Link>
@@ -87,7 +79,7 @@ export function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="transition-all duration-200 flex items-center justify-center hover:font-bold"
+                    className="transition-all duration-200 flex items-center justify-center hover:font-bold text-sm md:text-base lg:text-[16px]"
                     style={{
                       fontFamily: 'var(--font-inter-tight)',
                       fontWeight: isActive ? 700 : 400,
@@ -117,7 +109,7 @@ export function Header() {
             <div className="hidden md:block" >
               <Link
                 href="/contact"
-                className="text-white transition-colors duration-200 flex items-center justify-center"
+                className="text-white transition-colors duration-200 flex items-center justify-center py-2 px-4 md:py-3 md:px-5 lg:py-[14px] lg:px-[22px] rounded-xl"
                 style={{
                   maxWidth: '158.51px',
                   maxHeight: '49px',
@@ -128,6 +120,7 @@ export function Header() {
                 }}
               >
                 <span 
+                  className="text-sm md:text-base lg:text-[16px]"
                   style={{fontFamily: 'var(--font-sharp-sans)',
                   fontWeight: 500,
                   fontSize: '16px',
@@ -147,12 +140,12 @@ export function Header() {
             <div className="md:hidden">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="text-gray-900 hover:text-pink-600 transition-colors duration-200"
+                className="text-gray-900 hover:text-pink-600 transition-colors duration-200 p-2"
               >
                 {mobileMenuOpen ? (
-                  <X className="h-6 w-6" />
+                  <X className="h-5 w-5 sm:h-6 sm:w-6" />
                 ) : (
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
                 )}
               </button>
             </div>
@@ -161,18 +154,17 @@ export function Header() {
           {/* Mobile Menu */}
           {mobileMenuOpen && (
             <div className="md:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+              <div className="px-3 pt-3 pb-4 space-y-2 bg-white border-t border-gray-200 rounded-b-lg">
                 {navigation.map((item) => {
                   const isActive = pathname === item.href
                   return (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="block px-3 py-2 transition-all duration-200 flex items-center justify-center hover:font-bold"
+                      className="block px-4 py-3 transition-all duration-200 flex items-center justify-center hover:font-bold text-sm sm:text-base rounded-lg hover:bg-gray-50"
                       style={{
                         fontFamily: 'Inter Tight',
                         fontWeight: isActive ? 700 : 400,
-                        fontSize: '16px',
                         lineHeight: '1.2em',
                         textAlign: 'center',
                         color: '#000000'
@@ -195,30 +187,29 @@ export function Header() {
                 })}
                 
                 {/* Mobile CTA Button */}
-                <Link
-                  href="/contact"
-                  className="block text-white transition-colors duration-200 flex items-center justify-center"
-                  style={{
-                    width: '158.51px',
-                    height: '49px',
-                    borderRadius: '12px',
-                    padding: '14px 22px',
-                    fontFamily: 'Sharp Sans',
-                    fontWeight: 500,
-                    fontStyle: 'medium',
-                    fontSize: '16px',
-                    lineHeight: '1.0em',
-                    letterSpacing: '4%',
-                    textAlign: 'center',
-                    color: '#FFFFFF',
-                    backgroundColor: '#FE0B5F',
-                    margin: '0 auto'
-                  }}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <span>Book a spot</span>
-                  <ArrowUpRight className="h-4 w-4 inline ml-2" />
-                </Link>
+                <div className="pt-2">
+                  <Link
+                    href="/contact"
+                    className="block text-white transition-colors duration-200 flex items-center justify-center py-3 px-6 rounded-xl mx-auto"
+                    style={{
+                      width: '140px sm:150px',
+                      fontFamily: 'Sharp Sans',
+                      fontWeight: 500,
+                      fontStyle: 'medium',
+                      fontSize: '14px sm:16px',
+                      lineHeight: '1.0em',
+                      letterSpacing: '4%',
+                      textAlign: 'center',
+                      color: '#FFFFFF',
+                      backgroundColor: '#FE0B5F',
+                      gap: '8px'
+                    }}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <span>Book a spot</span>
+                    <ArrowUpRight className="h-3 w-3 sm:h-4 sm:w-4" />
+                  </Link>
+                </div>
               </div>
             </div>
           )}
