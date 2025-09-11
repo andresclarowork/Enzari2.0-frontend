@@ -155,11 +155,9 @@ export function AIProduction() {
           <div className="flex flex-col items-center lg:items-start">
              <Link 
                 href="/services" 
-                className="text-white flex items-center justify-center w-auto"
+                className="text-white flex items-center justify-center w-auto py-3 px-5 sm:py-3 sm:px-5 md:py-3.5 md:px-6 lg:py-[14px] lg:px-[22px] rounded-xl"
               style={{ 
                 backgroundColor: '#FE0B5F', 
-                borderRadius: '12px',
-                padding: '12px 18px sm:py-3 sm:px-5 md:py-3.5 md:px-6 lg:py-[14px] lg:px-[22px]',
                 gap: '8px sm:gap-2 md:gap-2.5 lg:gap-[10px]'
               }}
             >
