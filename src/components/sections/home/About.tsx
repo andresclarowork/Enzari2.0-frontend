@@ -14,6 +14,7 @@ export function About() {
               muted
               loop
               playsInline
+              preload="metadata"
               className="w-full h-auto"
             />
           </div>

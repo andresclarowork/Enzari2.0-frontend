@@ -141,7 +141,8 @@ export function Projects() {
                       alt={project.alt}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      unoptimized
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
                     />
                     
                     {/* Hover Overlay with Project Info */}
@@ -295,7 +296,8 @@ export function Projects() {
                       alt={project.alt}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      unoptimized
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
                     />
                     
                     {/* Hover Overlay with Project Info */}
@@ -373,7 +375,8 @@ export function Projects() {
                       alt={project.alt}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      unoptimized
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
                     />
                     
                     {/* Hover Overlay with Project Info */}

@@ -134,7 +134,8 @@ export function Team() {
                                alt={member.name}
                                fill
                                className="object-cover transition-transform duration-300 group-hover:scale-110"
-                               unoptimized
+                               sizes="(max-width: 640px) 150px, (max-width: 768px) 200px, 250px"
+                               loading="lazy"
                              />
                             
                             {/* Gradient Overlay */}
@@ -221,7 +222,8 @@ export function Team() {
                                alt={member.name}
                                fill
                                className="object-cover"
-                               unoptimized
+                               sizes="(max-width: 640px) 150px, (max-width: 768px) 200px, 250px"
+                               loading="lazy"
                              />
                             
                             {/* Desktop Hover Overlay */}
