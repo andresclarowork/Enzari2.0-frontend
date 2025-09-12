@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter, Poppins, Inter_Tight, Karla, Space_Grotesk } from 'next/font/google'
 import './globals.css'
+import { PageTransition } from '@/components/PageTransition'
+import '@/utils/errorHandler'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -68,6 +70,9 @@ export const metadata: Metadata = {
     title: 'Enzari Creations - Leading the next era of work',
     description: 'We don\'t just build digital, we build different. Enzari Creations is your creative partner for innovative digital experiences.',
   },
+  other: {
+    'Content-Security-Policy': "script-src 'self' 'unsafe-inline' 'unsafe-eval'; object-src 'none';",
+  },
 }
 
 export default function RootLayout({
@@ -77,8 +82,32 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable} ${interTight.variable} ${karla.variable} ${spaceGrotesk.variable}`}>
+      <head>
+        <script src="/scripts/prevent-conflicts.js" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Additional conflict prevention
+              (function() {
+                if (typeof window !== 'undefined') {
+                  // Ensure isDragging is properly defined
+                  if (!window.hasOwnProperty('isDragging')) {
+                    Object.defineProperty(window, 'isDragging', {
+                      value: false,
+                      writable: true,
+                      configurable: false
+                    });
+                  }
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className={`${inter.className} antialiased`}>
-        {children}
+        <PageTransition>
+          {children}
+        </PageTransition>
       </body>
     </html>
   )

@@ -66,7 +66,12 @@ export function Header() {
                   height={32}
                   priority
                   className="w-auto h-6 sm:h-7 md:h-8 lg:h-8"
-                  style={{ maxWidth: '131px', maxHeight: '32px' }}
+                  style={{ 
+                    maxWidth: '131px', 
+                    maxHeight: '32px',
+                    width: 'auto',
+                    height: 'auto'
+                  }}
                 />
               </Link>
             </div>
@@ -164,7 +169,7 @@ export function Header() {
                       href={item.href}
                       className="block px-4 py-3 transition-all duration-200 flex items-center justify-center hover:font-bold text-sm sm:text-base rounded-lg hover:bg-gray-50"
                       style={{
-                        fontFamily: 'Inter Tight',
+                        fontFamily: 'var(--font-inter-tight)',
                         fontWeight: isActive ? 700 : 400,
                         lineHeight: '1.2em',
                         textAlign: 'center',
@@ -194,7 +199,7 @@ export function Header() {
                     className="block text-white transition-colors duration-200 flex items-center justify-center py-3 px-6 rounded-xl mx-auto"
                     style={{
                       width: '140px sm:150px',
-                      fontFamily: 'Sharp Sans',
+                      fontFamily: 'var(--font-sharp-sans)',
                       fontWeight: 500,
                       fontStyle: 'medium',
                       fontSize: '14px sm:16px',

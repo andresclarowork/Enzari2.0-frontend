@@ -2,59 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Neue Montreal';
-  src: url('/fonts/NeueMontreal-Regular.woff2') format('woff2'),
-       url('/fonts/NeueMontreal-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Neue Montreal';
-  src: url('/fonts/NeueMontreal-Medium.woff2') format('woff2'),
-       url('/fonts/NeueMontreal-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Neue Montreal';
-  src: url('/fonts/NeueMontreal-Bold.woff2') format('woff2'),
-       url('/fonts/NeueMontreal-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sharp Sans';
-  src: url('/fonts/SharpSans-Medium.woff2') format('woff2'),
-       url('/fonts/SharpSans-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Saans TRIAL';
-  src: url('/fonts/SaansTRIAL-Medium.woff2') format('woff2'),
-       url('/fonts/SaansTRIAL-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Saans TRIAL';
-  src: url('/fonts/SaansTRIAL-Regular.woff2') format('woff2'),
-       url('/fonts/SaansTRIAL-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+/* Custom fonts removed - using Google Fonts only */
 
 @layer base {
   :root {
@@ -63,10 +11,11 @@
     --font-inter-tight: 'Inter Tight', system-ui, sans-serif;
     --font-karla: 'Karla', system-ui, sans-serif;
     --font-space-grotesk: 'Space Grotesk', system-ui, sans-serif;
-    --font-neue-montreal: 'Neue Montreal', system-ui, sans-serif;
-    --font-satoshi: 'Satoshi', system-ui, sans-serif;
-    --font-sharp-sans: 'Sharp Sans', system-ui, sans-serif;
-    --font-saans-trial: 'Saans TRIAL', system-ui, sans-serif;
+    /* Using Space Grotesk as substitute for custom fonts */
+    --font-neue-montreal: 'Space Grotesk', system-ui, sans-serif;
+    --font-satoshi: 'Inter Tight', system-ui, sans-serif;
+    --font-sharp-sans: 'Space Grotesk', system-ui, sans-serif;
+    --font-saans-trial: 'Inter Tight', system-ui, sans-serif;
   }
 
   * {

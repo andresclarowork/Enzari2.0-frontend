@@ -1,0 +1,16 @@
+{
+  "name": "Enzari Creations",
+  "short_name": "Enzari",
+  "description": "Leading the next era of work - We don't just build digital, we build different.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FE0B5F",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

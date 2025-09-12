@@ -33,14 +33,14 @@ export function Footer() {
             <div className="text-center mb-4 sm:mb-6 md:mb-8">
               <Link href="/" className="inline-block transition-all duration-300 hover:scale-105 hover:opacity-80 mb-6">
                 <Image
-                  src="/assets/images/Logo.png"
+                  src="/assets/images/Logo.svg"
                   alt="Enzari Creations Logo"
                   width={131}
                   height={32}
                   priority                  
                 />
               </Link>
-              <p 
+              <div 
                 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[62px] leading-tight"
                 style={{
                   fontFamily: 'var(--font-inter-tight)',
@@ -52,7 +52,7 @@ export function Footer() {
               >
                 <div>Leading the</div>
                 <div>next era of work.</div>
-              </p>
+              </div>
             </div>
 
             {/* Quick Links */}
@@ -186,14 +186,14 @@ export function Footer() {
             <div className="flex flex-col" style={{gap:'40px'}}>
               <Link href="/" className="flex items-center transition-all duration-300 hover:scale-105 hover:opacity-80">
                 <Image
-                  src="/assets/images/Logo.png"
+                  src="/assets/images/Logo.svg"
                   alt="Enzari Creations Logo"
                   width={131}
                   height={32}
                   priority                  
                 />
               </Link>
-              <p 
+              <div 
                 style={{
                   fontFamily: 'var(--font-inter-tight)',
                   fontWeight: 400,
@@ -206,7 +206,7 @@ export function Footer() {
               >
                 <div>Leading the</div>
                 <div>next era of work.</div>
-              </p>
+              </div>
             </div>
 
             {/* Right Column - Quick Links and Contact Information */}
