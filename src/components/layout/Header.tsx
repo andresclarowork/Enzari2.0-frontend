@@ -121,13 +121,14 @@ export function Header() {
               >
                 <span 
                   className="text-sm md:text-base lg:text-[16px]"
-                  style={{fontFamily: 'var(--font-sharp-sans)',
-                  fontWeight: 500,
-                  fontSize: '16px',
-                  lineHeight: '1.0em',
-                  letterSpacing: '-0.04em',
-                  textAlign: 'center',
-                  color: '#FFFFFF'
+                  style={{
+                    fontFamily: 'var(--font-sharp-sans)',
+                    fontWeight: 500,
+                    fontSize: '16px',
+                    lineHeight: '1.0em',
+                    letterSpacing: '-0.04em',
+                    textAlign: 'center',
+                    color: '#FFFFFF'  
                   }}
                 >
                   Book a spot

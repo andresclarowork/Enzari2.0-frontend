@@ -20,7 +20,7 @@ export function Hero() {
              Redefining What Drives Us
           </p>
           <p 
-            className="text-sm sm:text-base md:text-lg lg:text-[18px] leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-[25px] text-center"
+            className="sm:pb-5 md:pb-6 lg:pb-[25px] text-sm sm:text-base md:text-lg lg:text-[18px] leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-[25px] text-center"
             style={{
               fontFamily: 'var(--font-inter-tight)',
               fontWeight: 400,
@@ -28,8 +28,7 @@ export function Hero() {
               letterSpacing: '0px',
               verticalAlign: 'middle',
               color: '#000000',
-              borderBottom: '1px solid #D2D2D2',
-              paddingBottom: '15px sm:pb-5 md:pb-6 lg:pb-[25px]'
+              borderBottom: '1px solid #D2D2D2',              
             }}
           >
             We're not just a design agency. We're the product-thinking team behind 100M+ users, $2B+ funding, & 250+ VC-backed success stories.

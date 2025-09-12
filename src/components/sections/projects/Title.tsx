@@ -16,7 +16,7 @@ export function Title() {
              Showcasing What We Build
           </p>
           <p 
-            className="text-sm sm:text-base lg:text-[18px] leading-relaxed sm:leading-relaxed lg:leading-[25px] text-center"
+            className="sm:pb-5 md:pb-6 lg:pb-[25px] text-sm sm:text-base lg:text-[18px] leading-relaxed sm:leading-relaxed lg:leading-[25px] text-center"
             style={{
               fontFamily: 'var(--font-inter-tight)',
               fontWeight: 400,
@@ -24,8 +24,7 @@ export function Title() {
               letterSpacing: '0px',
               verticalAlign: 'middle',
               color: '#000000',
-              borderBottom: '1px solid #D2D2D2',
-              paddingBottom: '15px sm:pb-5 md:pb-6 lg:pb-[25px]'
+              borderBottom: '1px solid #D2D2D2',              
             }}
           >
             Every project tells a story. Here's how we've helped brands bring their visions to life through thoughtful design and strategy.

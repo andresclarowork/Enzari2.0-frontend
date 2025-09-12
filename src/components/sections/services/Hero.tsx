@@ -20,7 +20,7 @@ export function Hero() {
                         What We Offer
                     </p>
                     <p 
-                        className="text-sm sm:text-base lg:text-[18px] leading-relaxed sm:leading-relaxed lg:leading-[25px]"
+                        className="sm:pb-5 md:pb-6 lg:pb-[25px] text-sm sm:text-base lg:text-[18px] leading-relaxed sm:leading-relaxed lg:leading-[25px]"
                         style={{
                         fontFamily: 'var(--font-inter-tight)',
                         fontWeight: 400,
@@ -28,8 +28,7 @@ export function Hero() {
                         letterSpacing: '0px',                        
                         verticalAlign: 'middle',
                         color: '#000000',
-                        borderBottom: '1px solid #D2D2D2',
-                        paddingBottom: '15px sm:pb-5 md:pb-6 lg:pb-[25px]'
+                        borderBottom: '1px solid #D2D2D2',                        
                         }}
                     >
                         Everything we create is hand crafted through the lens of the brand recognition and user experience. At Enzari our suite of services includes all that's needed to deliver world-class products and services to your targeted audience.

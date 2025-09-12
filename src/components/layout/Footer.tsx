@@ -388,7 +388,7 @@ export function Footer() {
                 <Link 
                   key={social.name}
                   href={social.href}
-                  className="flex flex-row items-start max-w-[210px] pb-[11px] group transition-all duration-300 hover:translate-y-[-2px] hover:scale-105"
+                  className="flex flex-row items-center justify-between pb-[11px] mr-4 group transition-all duration-300 hover:translate-y-[-2px] hover:scale-105 w-1/6"
                   style={{ borderBottom: '1px solid #999999' }}
                 >
                   <span 
@@ -416,9 +416,9 @@ export function Footer() {
           {/* Bottom Section - Copyright & Legal */}
           <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 lg:w-[100%]" style={{justifyContent:'space-between'}}>
             {/* Mobile Bottom Section */}
-            <div className="flex lg:hidden text-center space-y-4">
+            <div className="flex lg:hidden flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0">
               <p 
-                className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-[14px]"
+                className="text-xs sm:text-sm"
                 style={{
                   fontFamily: 'var(--font-inter-tight)',
                   fontWeight: 400,
@@ -429,10 +429,10 @@ export function Footer() {
               >
                 2025, All Rights Reserved
               </p>
-              <div className="flex flex-row justify-center gap-6">
+              <div className="flex flex-row gap-4 sm:gap-6">
                 <Link 
                   href="/terms" 
-                  className="transition-all duration-300 hover:text-[#FE0B5F] text-xs sm:text-sm md:text-base lg:text-lg xl:text-[14px]"
+                  className="transition-all duration-300 hover:text-[#FE0B5F] text-xs sm:text-sm"
                   style={{
                     fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 400,
@@ -441,11 +441,11 @@ export function Footer() {
                     color: '#111111'
                   }}
                 >
-                  Terms & Condition
+                  Terms & Conditions
                 </Link>
                 <Link 
                   href="/privacy" 
-                  className="transition-all duration-300 hover:text-[#FE0B5F] text-xs sm:text-sm md:text-base lg:text-lg xl:text-[14px]"
+                  className="transition-all duration-300 hover:text-[#FE0B5F] text-xs sm:text-sm"
                   style={{
                     fontFamily: 'var(--font-inter-tight)',
                     fontWeight: 400,
@@ -488,7 +488,7 @@ export function Footer() {
                     color: '#111111'
                   }}
                 >
-                  Terms & Condition
+                  Terms & Conditions
                 </Link>
                 <Link 
                   href="/privacy" 
